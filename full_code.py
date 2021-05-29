@@ -1,17 +1,18 @@
 # coding: utf-8
 # ©2020 Nicolas St-Germain GNU GPL v3.
 
-from selenium import webdriver
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
-from selenium.webdriver.firefox.options import Options
 import csv
 import datetime
-import requests
+import errno
 import os
 import os.path
-import errno
+import requests
+
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.firefox.options import Options
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 
 # Éléments de base ------------>
 
@@ -23,7 +24,7 @@ terms = ["Accident", "Cégep"]  # "Police OR Sûreté", "décès OR mort", "Ince
 #########################
 
 # Lien qu'utilise le bot pour récupérer les données ------>
-def get_full_url():
+def get_full_url(term, villes):
     base_url = "https://news.google.com/search?q="
 
     return base_url + term + "%20près%20de%20" + villes
@@ -39,18 +40,18 @@ def mkdir_p(path):
             raise
 
 
-def create_path_document():
+def create_path_document(villes):
     root = "./"
     saisie = "Saisie" + "_" + get_current_time() + "/"
-    path = villes_2 + "/"
+    path = villes + "/"
 
     return root + saisie + path
 
 
-def create_path_document_csv():
-    file = villes_2 + "_" + get_current_time() + ".csv"
+def create_path_document_csv(villes):
+    file = villes + "_" + get_current_time() + ".csv"
 
-    return create_path_document() + file
+    return create_path_document(villes) + file
 
 
 # Open "path" for writing, creating any parent directories as needed.
@@ -72,7 +73,7 @@ def get_current_time():
 
 
 # Le profil pour le navigateur lors de la saisie ---->
-def create_robot_profile():
+def create_robot_profile(infos):
 
     #Profil de la page qui sera ouverte :
     profile = webdriver.FirefoxProfile()
@@ -96,13 +97,11 @@ def create_robot_profile():
 
 
 # Confirmer que la localisation est bonne --> NE MARCHE PAS
-def get_localisation_confirmation():  # À CORRIGER ET À METTRE À LA BONNE PLACE
-    browser = webdriver.Firefox(options=create_robot_profile())
+def get_localisation_confirmation(infos):  # À CORRIGER ET À METTRE À LA BONNE PLACE
+    browser = webdriver.Firefox(options=create_robot_profile(infos))
     browser.get("https://findmylocation.org")
 
-    main = WebDriverWait(browser, 10).until(
-        EC.presence_of_element_located((By.ID, "locationname"))
-    )
+    main = WebDriverWait(browser, 10).until(EC.presence_of_element_located((By.ID, "locationname")))
     data = main.text
     print(data)
     # f = open(create_path_document() + "localisation.txt", "w")
@@ -112,83 +111,76 @@ def get_localisation_confirmation():  # À CORRIGER ET À METTRE À LA BONNE PLA
     # browser.close()
 
 
-#CODE DU PROGRAMME ------->
-# ouvrir le fichier csv contenant les données.
-with open(csv_read_place(), "r") as ville_csv:
-    ville_reader = csv.DictReader(ville_csv)
-    i = 0
-    for line in ville_reader:
-        infos = [line["ville"], line["latitude"],
-                 line["longitude"]]  # imprimer juste les villes
-        i += 1
-        if i < 2:
-            print("<>" * 32)
-            villes = infos[0]
-            villes_2 = villes.replace(" ", "")
+def main() -> None:
+    # ouvrir le fichier csv contenant les données.
+    with open(csv_read_place(), "r") as ville_csv:
+        ville_reader = csv.DictReader(ville_csv)
+        i = 0
+        for line in ville_reader:
+            infos = [line["ville"], line["latitude"],
+                    line["longitude"]]  # imprimer juste les villes
+            i += 1
+            if i < 2:
+                print("<>" * 32)
+                villes = infos[0]
+                villes_2 = villes.replace(" ", "")
 
-            with safe_open_w(create_path_document_csv()) as f2:
-                creation_fichier = csv.writer(f2)
-                creation_fichier.writerow(["Villes", "Mots-clés", "position du média",
-                                           "Nom du média", "Titre de l'article", "Date de publication", "URL"])
-                for term in terms:
-                    try:
-                        browser = webdriver.Firefox(
-                            options=create_robot_profile())
-                        browser.get(get_full_url())
+                with safe_open_w(create_path_document_csv(villes_2)) as f2:
+                    creation_fichier = csv.writer(f2)
+                    creation_fichier.writerow(["Villes", "Mots-clés", "position du média", "Nom du média", "Titre de l'article", "Date de publication", "URL"])
+                    for term in terms:
+                        try:
+                            browser = webdriver.Firefox(options=create_robot_profile())
+                            browser.get(get_full_url(terms, villes))
 
-                        main = WebDriverWait(browser, 10).until(
-                            EC.presence_of_element_located(
-                                (By.TAG_NAME, "main"))
-                        )
+                            main = WebDriverWait(browser, 10).until(EC.presence_of_element_located((By.TAG_NAME, "main")))                            )
 
-                        articles = main.find_elements_by_tag_name("article")
+                            articles = main.find_elements_by_tag_name("article")
 
-                        n = 0
-                        for article in articles:
-                            n += 1
-                            if n < 4:
-                                #Nom du média --->
-                                media = article.find_element_by_class_name(
-                                    "SVJrMe").find_element_by_tag_name("a")
-                                nom_media = media.text
+                            n = 0
+                            for article in articles:
+                                n += 1
+                                if n < 4:
+                                    #Nom du média --->
+                                    media = article.find_element_by_class_name("SVJrMe").find_element_by_tag_name("a")
+                                    nom_media = media.text
 
-                                #URL ---> DÉTERMINER COMMENT DIFFÉRENCIER LOCAL, NATIONAL, RÉGIONAL ET HORS-CANADA
-                                try:
-                                    lien_article = article.find_element_by_class_name(
-                                        "VDXfz").get_attribute('href')
-                                    r = requests.get(
-                                        lien_article, allow_redirects=False)
-                                    lien_article = r.headers['Location']
+                                    #URL ---> DÉTERMINER COMMENT DIFFÉRENCIER LOCAL, NATIONAL, RÉGIONAL ET HORS-CANADA
+                                    try:
+                                        lien_article = article.find_element_by_class_name("VDXfz").get_attribute('href')
+                                        r = requests.get(lien_article, allow_redirects=False)
+                                        lien_article = r.headers['Location']
 
-                                except:
-                                    lien_article = "url marche pas"
+                                    except:
+                                        lien_article = "url marche pas"
 
-                                #Titre de l'article --->
-                                titre_article = article.find_element_by_tag_name(
-                                    "h3")
-                                titre_article2 = titre_article.text
+                                    #Titre de l'article --->
+                                    titre_article = article.find_element_by_tag_name("h3")
+                                    titre_article2 = titre_article.text
 
-                                #Date de publication --->
-                                try:
-                                    date = article.find_element_by_tag_name(
-                                        "time").get_attribute("outerHTML")
-                                    dat = date.split('datetime="')[
-                                        1].split("T")[0]
+                                    #Date de publication --->
+                                    try:
+                                        date = article.find_element_by_tag_name("time").get_attribute("outerHTML")
+                                        dat = date.split('datetime="')[1].split("T")[0]
 
-                                except:
-                                    dat = ""
+                                    except:
+                                        dat = ""
 
-                                # #type de médias --->
-                                # #type_media = "impossible à déterminer pour l'instant"
-                                infos = [villes, term, n, nom_media,
-                                         titre_article2, dat, lien_article]
-                                print(infos)
-                                creation_fichier.writerow(infos)
+                                    # #type de médias --->
+                                    # #type_media = "impossible à déterminer pour l'instant"
+                                    csv_rows = [villes, term, n, nom_media,
+                                            titre_article2, dat, lien_article]
+                                    print(csv_rows)
+                                    creation_fichier.writerow(csv_rows)
 
-                        get_localisation_confirmation()
-                        browser.quit()
-                        print("fermeture pour mieux ouvrir")
+                            get_localisation_confirmation(infos)
+                            browser.quit()
+                            print("fermeture pour mieux ouvrir")
 
-                    except:
-                        browser.quit()
-                        print("erreur à la hauteur des termes")
+                        except:
+                            browser.quit()
+                            print("erreur à la hauteur des termes")
+
+
+if __name__ == "__main__":
+    main()
