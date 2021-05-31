@@ -114,6 +114,7 @@ def get_localisation_confirmation(infos):  # À CORRIGER ET À METTRE À LA BONN
     main = WebDriverWait(browser, 10).until(EC.presence_of_element_located((By.ID, "locationname")))
     data = main.text
     print(data)
+    browser.quit()
     # f = open(create_path_document() + "localisation.txt", "w")
     # f.write(infos)
     # f.write("L'ADRESSE EXACTE EST :" + data)
