@@ -64,7 +64,7 @@ def safe_open_w(path):
 
 
 # pour ouvrir le bon fichier ------->
-def csv_read_place():  # faut juste changer le path pour chaque code à utiliser.
+def csv_read_place():
     return "./MRC_points.csv"
 
 
