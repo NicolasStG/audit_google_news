@@ -9,11 +9,13 @@ import os.path
 import requests
 
 from selenium import webdriver
+from selenium.webdriver import FirefoxOptions
 from selenium.webdriver.common.by import By
-from selenium.webdriver.firefox.firefox_profile import FirefoxProfile
 from selenium.webdriver.firefox.options import Options
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+
+
 
 # Éléments de base ------------>
 
@@ -27,7 +29,6 @@ terms = ["Accident", "Cégep"]  # "Police OR Sûreté", "décès OR mort", "Ince
 # Lien qu'utilise le bot pour récupérer les données ------>
 def get_full_url(term, villes):
     base_url = "https://news.google.com/search?q="
-
     return base_url + term + "%20près%20de%20" + villes
 
 
@@ -41,6 +42,7 @@ def mkdir_p(path):
         else:
             raise
 
+#faudrait ajouter que si le directory existe qu'il ajoute le fichier directement dedans et non pas qu'il le overwrite.
 
 def create_path_document(villes):
     root = "./"
@@ -64,8 +66,11 @@ def safe_open_w(path):
 
 
 # pour ouvrir le bon fichier ------->
-def csv_read_place():
+def csv_read_city():
     return "./MRC_points.csv"
+
+def csv_read_terms():
+    return "./terms.csv"
 
 
 # Date et heure du jour de la saisie utilisé dans la création du dossier et du fichier --->
@@ -76,27 +81,27 @@ def get_current_time():
 
 
 # Le profil pour le navigateur lors de la saisie ---->
-def create_robot_profile(infos) -> FirefoxProfile:
+def create_robot_profile(infos) -> FirefoxOptions:
 
     #Profil de la page qui sera ouverte :
-    profile = webdriver.FirefoxProfile()
+    options = webdriver.FirefoxOptions()
     hoptions = Options()
     hoptions.headless = True
     #profile.set_preference("browser.privatebrowsing.autostart", True)
-    profile.set_preference("geo.enabled", True)
-    profile.set_preference("browser.cache.disk.enable", False)
-    profile.set_preference("browser.cache.memory.enable", False)
-    profile.set_preference("browser.cache.offline.enable", False)
-    profile.set_preference("network.http.use-cache", False)
-    profile.set_preference("dom.disable_open_during_load", False)
+    options.set_preference("geo.enabled", True)
+    options.set_preference("browser.cache.disk.enable", False)
+    options.set_preference("browser.cache.memory.enable", False)
+    options.set_preference("browser.cache.offline.enable", False)
+    options.set_preference("network.http.use-cache", False)
+    options.set_preference("dom.disable_open_during_load", False)
 
     #déterminer la localisation :
-    profile.set_preference('geo.prompt.testing', True)
-    profile.set_preference('geo.prompt.testing.allow', True)
-    profile.set_preference('geo.provider.network.url',
+    options.set_preference('geo.prompt.testing', True)
+    options.set_preference('geo.prompt.testing.allow', True)
+    options.set_preference('geo.provider.network.url',
                            'data:application/json,{"status":"OK","location": {"lat":'+str(infos[1])+',"lng":'+str(infos[2])+'}, "accuracy": 100}')
 
-    return profile
+    return options
 
 
 # Confirmer que la localisation est bonne --> NE MARCHE PAS
@@ -116,29 +121,25 @@ def get_localisation_confirmation(infos):  # À CORRIGER ET À METTRE À LA BONN
 
 def get_article_url(article) -> str:
     #URL ---> DÉTERMINER COMMENT DIFFÉRENCIER LOCAL, NATIONAL, RÉGIONAL ET HORS-CANADA
-    try:
-        lien_article = article.find_element_by_class_name("VDXfz").get_attribute('href')
-        r = requests.get(lien_article, allow_redirects=False)
-        return r.headers['Location']
-
-    except:
-        return "url marche pas"
+    lien_article = article.find_element_by_class_name("VDXfz").get_attribute('href')
+    r = requests.get(lien_article, allow_redirects=False)
+    return r.headers['Location']
 
 
-def get_article_date(article) -> str:
+
+def get_article_date(article : FirefoxWebElement) -> str:
     #Date de publication --->
-    try:
-        date = article.find_element_by_tag_name("time").get_attribute("outerHTML")
-        return date.split('datetime="')[1].split("T")[0]
 
-    except:
-        return ""
+
+    date = article.find_element_by_tag_name("time").get_attribute("outerHTML")
+    return date.split('datetime="')[1].split("T")[0]
+
 
 
 def get_article_title(article) -> str:
     titre_article = article.find_element_by_tag_name("h3").text
     
-    return titre_article.text
+    return titre_article
 
 
 def get_media_name(article) -> str:
@@ -167,21 +168,16 @@ def write_article_to_csv(creation_fichier, villes, term, n, article) -> None:
 
 
 def research_term_in_city(villes, creation_fichier, term, infos) -> None:
-    try:
-        browser = webdriver.Firefox(options=create_robot_profile())
-        browser.get(get_full_url(terms, villes))
+    browser = webdriver.Firefox(options=create_robot_profile(infos))
+   
+    browser.get(get_full_url(term, villes))
 
-        for n, article in enumerate(get_articles(browser)):
-            if n < 4:
-                write_article_to_csv(creation_fichier, villes, term, n, article)
+    for n, article in enumerate(get_articles(browser)):
+        if n < 4:
+            write_article_to_csv(creation_fichier, villes, term, n+1, article)
 
-        get_localisation_confirmation(infos)
-        browser.quit()
-        print("fermeture pour mieux ouvrir")
-
-    except:
-        browser.quit()
-        print("erreur à la hauteur des termes")
+    get_localisation_confirmation(infos)
+    browser.quit()
 
 def process_city(i: int, city: dict) -> None:
     infos = [city["ville"], city["latitude"], city["longitude"]]
@@ -199,7 +195,7 @@ def process_city(i: int, city: dict) -> None:
 
 def main() -> None:
     # ouvrir le fichier csv contenant les données.
-    with open(csv_read_place(), "r") as ville_csv:
+    with open(csv_read_city(), "r") as ville_csv:
         ville_reader = csv.DictReader(ville_csv)
         
         for i, city in enumerate(ville_reader):
