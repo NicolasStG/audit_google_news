@@ -9,7 +9,9 @@ import os.path
 import requests
 
 from selenium import webdriver
+from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver import FirefoxOptions
+from selenium.webdriver.remote.webelement import WebElement
 from selenium.webdriver.common.by import By
 from selenium.webdriver.firefox.options import Options
 from selenium.webdriver.support.ui import WebDriverWait
@@ -127,14 +129,15 @@ def get_article_url(article) -> str:
 
 
 
-def get_article_date(article : FirefoxWebElement) -> str:
+def get_article_date(article : WebElement) -> str:
     #Date de publication --->
+    try :
+        date = article.find_element_by_tag_name("time").get_attribute("outerHTML")
+        return date.split('datetime="')[1].split("T")[0]
 
+    except NoSuchElementException: 
 
-    date = article.find_element_by_tag_name("time").get_attribute("outerHTML")
-    return date.split('datetime="')[1].split("T")[0]
-
-
+        return ""
 
 def get_article_title(article) -> str:
     titre_article = article.find_element_by_tag_name("h3").text
