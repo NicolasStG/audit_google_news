@@ -55,7 +55,7 @@ def create_path_document(villes):
 
 
 def create_path_document_csv(villes):
-    file = villes + "_" + get_current_time() + ".csv"
+    file = villes.replace(" ", "") + "_" + get_current_time() + ".csv"
 
     return create_path_document(villes) + file
 
@@ -106,20 +106,18 @@ def create_robot_profile(infos) -> FirefoxOptions:
     return options
 
 
-# Confirmer que la localisation est bonne --> NE MARCHE PAS
-def get_localisation_confirmation(infos):  # À CORRIGER ET À METTRE À LA BONNE PLACE
+# Confirmer que la localisation est bonne -->
+def get_localisation_confirmation(infos, villes):  # À AJOUTER IF FILE EXIST DON'T OVERWRITE
     browser = webdriver.Firefox(options=create_robot_profile(infos))
     browser.get("https://findmylocation.org")
 
-    main = WebDriverWait(browser, 10).until(EC.presence_of_element_located((By.ID, "locationname")))
+    main = WebDriverWait(browser, 20).until(EC.presence_of_element_located((By.ID, "locationname")))
     data = main.text
     print(data)
-    browser.quit()
-    # f = open(create_path_document() + "localisation.txt", "w")
-    # f.write(infos)
-    # f.write("L'ADRESSE EXACTE EST :" + data)
-    # f.close()
-    # browser.close()
+    f = open(create_path_document(villes) + "localisation.txt", "w")
+    f.write("L'ADRESSE EXACTE EST :" + data)
+    f.close()
+    browser.close()
 
 
 def get_article_url(article) -> str:
@@ -141,9 +139,15 @@ def get_article_date(article : WebElement) -> str:
         return ""
 
 def get_article_title(article) -> str:
-    titre_article = article.find_element_by_tag_name("h3").text
-    
-    return titre_article
+    try : 
+        titre_article = article.find_element_by_tag_name("h3").text
+
+        return titre_article
+
+    except NoSuchElementException :
+        titre_article =  article.find_element_by_tag_name("h4").text
+
+        return titre_article
 
 
 def get_media_name(article) -> str:
@@ -180,8 +184,8 @@ def research_term_in_city(villes, creation_fichier, term, infos) -> None:
         if n < 4:
             write_article_to_csv(creation_fichier, villes, term, n+1, article)
 
-    get_localisation_confirmation(infos)
-    browser.quit()
+    #get_localisation_confirmation(infos, villes)
+    browser.close()
 
 def process_city(i: int, city: dict) -> None:
     infos = [city["ville"], city["latitude"], city["longitude"]]
@@ -190,12 +194,18 @@ def process_city(i: int, city: dict) -> None:
         print("<>" * 32)
         villes = infos[0]  # imprimer juste les villes
 
-        with safe_open_w(create_path_document_csv(villes.replace(" ", ""))) as f2:
+        with safe_open_w(create_path_document_csv(villes)) as f2:
             creation_fichier = csv.writer(f2)
             creation_fichier.writerow(["Villes", "Mots-clés", "position du média", "Nom du média", "Titre de l'article", "Date de publication", "URL"])
-            for term in terms:
-                research_term_in_city(villes, creation_fichier, term, infos)
+            with open(csv_read_terms(), "r") as term_csv:
+                term_reader = csv.DictReader(term_csv)
+                for terms in term_reader:
+                    term = terms["term"]
+                    research_term_in_city(villes, creation_fichier, term, infos)
+
+            #process_term(villes, creation_fichier, infos)
                 
+#def process_term(villes, creation_fichier, infos) :
 
 def main() -> None:
     # ouvrir le fichier csv contenant les données.
