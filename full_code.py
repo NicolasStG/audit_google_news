@@ -8,6 +8,7 @@ import os
 import os.path
 import requests
 
+from datetime import datetime
 from selenium import webdriver
 from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver import FirefoxOptions
@@ -77,9 +78,9 @@ def csv_read_terms():
 
 # Date et heure du jour de la saisie utilisé dans la création du dossier et du fichier --->
 def get_current_time():
-    now = datetime.datetime.now()
+    now = datetime.now()
 
-    return now.strftime('%d-%m-%Y')
+    return now.strftime('%Y-%m-%d')
 
 
 # Le profil pour le navigateur lors de la saisie ---->
@@ -115,7 +116,7 @@ def get_localisation_confirmation(infos, villes):  # À AJOUTER IF FILE EXIST DO
     data = main.text
     print(data)
     f = open(create_path_document(villes) + "localisation.txt", "w")
-    f.write("L'ADRESSE EXACTE EST :" + data)
+    f.write("L'ADRESSE EXACTE EST :" + data) #DATA imprime tjrs pas
     f.close()
     browser.close()
 
@@ -161,16 +162,31 @@ def get_articles(browser) -> list:
     
     return main_page.find_elements_by_tag_name("article")
 
+def calculate_days_diff(article):
+
+    try :
+        date_saisie = get_current_time()
+        print(type(date_saisie), date_saisie)
+        date_jour = datetime.strptime(date_saisie, '%Y-%m-%d')
+
+        date_publication = get_article_date(article)
+        print(type(date_publication), date_publication)
+        date_pub_obj = datetime.strptime(date_publication, '%Y-%m-%d')
+        return (date_jour - date_pub_obj).days
+
+    except ValueError :
+        return ""
 
 def write_article_to_csv(creation_fichier, villes, term, n, article) -> None:
     nom_media = get_media_name(article)
     lien_article = get_article_url(article)
     titre_article = get_article_title(article)
     date = get_article_date(article)
+    days_diff = calculate_days_diff(article)
 
     # # type de médias --->
     # type_media = "impossible à déterminer pour l'instant"
-    csv_rows = [villes, term, n, nom_media, titre_article, date, lien_article]
+    csv_rows = [villes, term, n, nom_media, titre_article, date, days_diff, lien_article]
     print(csv_rows)
     creation_fichier.writerow(csv_rows)
 
@@ -196,7 +212,7 @@ def process_city(i: int, city: dict) -> None:
 
         with safe_open_w(create_path_document_csv(villes)) as f2:
             creation_fichier = csv.writer(f2)
-            creation_fichier.writerow(["Villes", "Mots-clés", "position du média", "Nom du média", "Titre de l'article", "Date de publication", "URL"])
+            creation_fichier.writerow(["Villes", "Mots-clés", "position du média", "Nom du média", "Titre de l'article", "Date de publication", "Journée de différence","URL"])
             with open(csv_read_terms(), "r") as term_csv:
                 term_reader = csv.DictReader(term_csv)
                 for terms in term_reader:
