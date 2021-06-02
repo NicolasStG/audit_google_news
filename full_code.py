@@ -2,9 +2,9 @@
 # ©2020 Nicolas St-Germain GNU GPL v3.
 
 import csv, errno, os, os.path, requests, time
-from googleQuebec import termes, villes, montreal
-from datetime import datetime
 
+from datetime import datetime
+from googleQuebec import termes, villes, montreal
 from selenium import webdriver
 from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver import FirefoxOptions
@@ -206,12 +206,9 @@ def process_city(i: int, city: dict) -> None:
         with safe_open_w(create_path_document_csv(villes)) as f2:
             creation_fichier = csv.writer(f2)
             creation_fichier.writerow(["Villes", "Mots-clés", "position du média", "Nom du média", "Titre de l'article", "Date de publication", "Journée de différence","URL"])
-            # with open(csv_read_terms(), "r") as term_csv:
-            #     term_reader = csv.DictReader(term_csv)
-            #     for terms in term_reader:
-                    # term = terms["term"]
-            term = "Police OR Sûreté"
-            research_term_in_city(villes, creation_fichier, term, infos)
+            for terms in termes:
+                term = terms[1]
+                research_term_in_city(villes, creation_fichier, term, infos)
 
             #process_term(villes, creation_fichier, infos)
                 
