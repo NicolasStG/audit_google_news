@@ -1,15 +1,10 @@
 # coding: utf-8
 # ©2020 Nicolas St-Germain GNU GPL v3.
 
-import csv
-import datetime
-import errno
-import os
-import os.path
-import requests
-import time
-
+import csv, errno, os, os.path, requests, time
+from googleQuebec import termes, villes, montreal
 from datetime import datetime
+
 from selenium import webdriver
 from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver import FirefoxOptions
@@ -18,7 +13,6 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.firefox.options import Options
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-
 
 #########################
 ####### FONCTIONS #######
