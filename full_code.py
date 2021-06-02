@@ -97,7 +97,7 @@ def create_robot_profile(infos) -> FirefoxOptions:
 
 
 # Confirmer que la localisation est bonne -->
-def get_localisation_confirmation(infos, villes):
+def get_localisation_confirmation(infos : str, villes : str):
     if os.path.exists(create_path_document(villes) + "localisation.txt") :
         pass
 
@@ -105,12 +105,12 @@ def get_localisation_confirmation(infos, villes):
         browser = webdriver.Firefox(options=create_robot_profile(infos))
         browser.get("https://findmylocation.org")
         time.sleep(20)
-        location = browser.find_element_by_id("locationname")
-        data = location.text
-        print(data)
+        location = browser.find_element_by_id("locationname").text
+        latitude = browser.find_element_by_id("latitude").text
+        longitude = browser.find_element_by_id("longitude").text
         f = open(create_path_document(villes) + "localisation.txt", "w")
-        f.write("Latitude : " + infos[1] + " " + "Longitude : " + infos[2] + "\n\n")
-        f.write("L'ADRESSE EXACTE EST : " + data)
+        f.write("Latitude : " + latitude + " " + "Longitude : " + longitude + "\n\n")
+        f.write("L'ADRESSE EXACTE EST : " + location)
         f.close()
         browser.close()
 
@@ -198,7 +198,6 @@ def research_term_in_city(villes, creation_fichier, term, infos) -> None:
 
 def process_city(i: int, city: dict) -> None:
     infos = [city["ville"], city["latitude"], city["longitude"]]
-
     #if i < 1:
     print("<>" * 32)
     villes = infos[0]  # imprimer juste les villes
@@ -216,8 +215,8 @@ def main() -> None:
     # ouvrir le fichier csv contenant les données.
     # with open(csv_read_city(), "r") as ville_csv:
     #     ville_reader = csv.DictReader(ville_csv)
-    citie = cities[0], cities[10]
-    for i, city in enumerate(citie):
+    for i, city in enumerate(cities):
+        print(type(city))
         process_city(i, city)
 
 
