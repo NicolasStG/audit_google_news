@@ -1,4 +1,4 @@
-termes = [
+termes = (
 	[
 		'accident',
 		'décès OR mort',
@@ -11,27 +11,27 @@ termes = [
 		'candidat',
 		'préfet',
 		'travaux routiers',
-		'autobus OR tramway'
+		'autobus OR tramway',
+    'météo'
 	],
 	[
-		'"premier ministre"',
 		'élection OR campagne',
 		'député',
-		'racisme',
-		'"arme à feu" OR "arme à feu"',
+		'arme à feu',
 		'santé publique',
 		'covid OR COVID',
-		'immigration',
-		'climat',
-		'météo',
 		'construction'
 	],
 	[
-		'Chine',
+		'premier ministre',
+    'climat',
+    'immigration',
+    'racisme',
+    'Chine',
 		'Biden OR Trump',
 		'déficit'
 	]
-]
+)
 
 villes = [
  {
