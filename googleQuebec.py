@@ -1,4 +1,4 @@
-termes = (
+termes = [
 	[
 		'accident',
 		'décès OR mort',
@@ -31,9 +31,9 @@ termes = (
 		'Biden OR Trump',
 		'déficit'
 	]
-)
+]
 
-villes = [
+cities = [
  {
    "code": 48028,
    "ville": "Acton Vale ",

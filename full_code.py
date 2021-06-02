@@ -4,7 +4,7 @@
 import csv, errno, os, os.path, requests, time
 
 from datetime import datetime
-from googleQuebec import termes, villes, montreal
+from googleQuebec import termes, cities, montreal
 from selenium import webdriver
 from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver import FirefoxOptions
@@ -198,29 +198,27 @@ def research_term_in_city(villes, creation_fichier, term, infos) -> None:
 
 def process_city(i: int, city: dict) -> None:
     infos = [city["ville"], city["latitude"], city["longitude"]]
-    
-    if i < 1:
-        print("<>" * 32)
-        villes = infos[0]  # imprimer juste les villes
 
-        with safe_open_w(create_path_document_csv(villes)) as f2:
-            creation_fichier = csv.writer(f2)
-            creation_fichier.writerow(["Villes", "Mots-clés", "position du média", "Nom du média", "Titre de l'article", "Date de publication", "Journée de différence","URL"])
-            for terms in termes:
-                term = terms[1]
-                research_term_in_city(villes, creation_fichier, term, infos)
+    #if i < 1:
+    print("<>" * 32)
+    villes = infos[0]  # imprimer juste les villes
 
-            #process_term(villes, creation_fichier, infos)
-                
-#def process_term(villes, creation_fichier, infos) :
+    with safe_open_w(create_path_document_csv(villes)) as f2:
+        creation_fichier = csv.writer(f2)
+        creation_fichier.writerow(["Villes", "Mots-clés", "position du média", "Nom du média", "Titre de l'article", "Date de publication", "Journée de différence","URL"])
+        local = termes[0]
+        national = termes[1]
+        mixte = termes[2]
+        for term in local:
+            research_term_in_city(villes, creation_fichier, term, infos)                
 
 def main() -> None:
     # ouvrir le fichier csv contenant les données.
-    with open(csv_read_city(), "r") as ville_csv:
-        ville_reader = csv.DictReader(ville_csv)
-        
-        for i, city in enumerate(ville_reader):
-            process_city(i, city)
+    # with open(csv_read_city(), "r") as ville_csv:
+    #     ville_reader = csv.DictReader(ville_csv)
+    citie = cities[0], cities[10]
+    for i, city in enumerate(citie):
+        process_city(i, city)
 
 
 if __name__ == "__main__":
