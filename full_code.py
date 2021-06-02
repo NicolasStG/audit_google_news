@@ -7,6 +7,7 @@ import errno
 import os
 import os.path
 import requests
+import time
 
 from datetime import datetime
 from selenium import webdriver
@@ -18,12 +19,6 @@ from selenium.webdriver.firefox.options import Options
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
-
-
-# Éléments de base ------------>
-
-
-terms = ["Accident", "Cégep"]  # "Police OR Sûreté", "décès OR mort", "Incendie", "Préfêt" "Centre de services scolaire OR commission scolaire", "CISSS OR CIUSSS", "Maire OR Mairesse", "Candidat", "Travaux ET Routiers", "Autobus OR Tramway", "Météo", "Constrution", "Élection OR campagne", "député", "Armes à feu", "Santé publique", "COVID", "Immigration", "Climat", "Racisme", "Premier ministre", "Chine", "Biden OR Trump", "déficit"
 
 #########################
 ####### FONCTIONS #######
@@ -108,17 +103,22 @@ def create_robot_profile(infos) -> FirefoxOptions:
 
 
 # Confirmer que la localisation est bonne -->
-def get_localisation_confirmation(infos, villes):  # À AJOUTER IF FILE EXIST DON'T OVERWRITE
-    browser = webdriver.Firefox(options=create_robot_profile(infos))
-    browser.get("https://findmylocation.org")
+def get_localisation_confirmation(infos, villes):
+    if os.path.exists(create_path_document(villes) + "localisation.txt") :
+        pass
 
-    main = WebDriverWait(browser, 20).until(EC.presence_of_element_located((By.ID, "locationname")))
-    data = main.text
-    print(data)
-    f = open(create_path_document(villes) + "localisation.txt", "w")
-    f.write("L'ADRESSE EXACTE EST :" + data) #DATA imprime tjrs pas
-    f.close()
-    browser.close()
+    else : 
+        browser = webdriver.Firefox(options=create_robot_profile(infos))
+        browser.get("https://findmylocation.org")
+        time.sleep(20)
+        location = browser.find_element_by_id("locationname")
+        data = location.text
+        print(data)
+        f = open(create_path_document(villes) + "localisation.txt", "w")
+        f.write("Latitude : " + infos[1] + " " + "Longitude : " + infos[2] + "\n\n")
+        f.write("L'ADRESSE EXACTE EST : " + data)
+        f.close()
+        browser.close()
 
 
 def get_article_url(article) -> str:
@@ -199,7 +199,7 @@ def research_term_in_city(villes, creation_fichier, term, infos) -> None:
             write_article_to_csv(creation_fichier, villes, term, n+1, article)
 
 
-    #get_localisation_confirmation(infos, villes)
+    get_localisation_confirmation(infos, villes)
     browser.close()
 
 def process_city(i: int, city: dict) -> None:
