@@ -152,10 +152,10 @@ def get_article_title(article) -> str:
 
 
 def get_media_name(article) -> str:
-    media = article.find_element_by_class_name("SVJrMe").find_element_by_tag_name("a")
-    
-    return media.text
 
+    media = article.find_element_by_class_name("SVJrMe").find_element_by_tag_name("a")
+
+    return media.text
 
 def get_articles(browser) -> list:
     main_page = WebDriverWait(browser, 10).until(EC.presence_of_element_located((By.TAG_NAME, "main")))
@@ -166,11 +166,9 @@ def calculate_days_diff(article):
 
     try :
         date_saisie = get_current_time()
-        print(type(date_saisie), date_saisie)
         date_jour = datetime.strptime(date_saisie, '%Y-%m-%d')
 
         date_publication = get_article_date(article)
-        print(type(date_publication), date_publication)
         date_pub_obj = datetime.strptime(date_publication, '%Y-%m-%d')
         return (date_jour - date_pub_obj).days
 
@@ -197,8 +195,9 @@ def research_term_in_city(villes, creation_fichier, term, infos) -> None:
     browser.get(get_full_url(term, villes))
 
     for n, article in enumerate(get_articles(browser)):
-        if n < 4:
+        if n < 10:
             write_article_to_csv(creation_fichier, villes, term, n+1, article)
+
 
     #get_localisation_confirmation(infos, villes)
     browser.close()
@@ -206,18 +205,19 @@ def research_term_in_city(villes, creation_fichier, term, infos) -> None:
 def process_city(i: int, city: dict) -> None:
     infos = [city["ville"], city["latitude"], city["longitude"]]
     
-    if i < 2:
+    if i < 1:
         print("<>" * 32)
         villes = infos[0]  # imprimer juste les villes
 
         with safe_open_w(create_path_document_csv(villes)) as f2:
             creation_fichier = csv.writer(f2)
             creation_fichier.writerow(["Villes", "Mots-clés", "position du média", "Nom du média", "Titre de l'article", "Date de publication", "Journée de différence","URL"])
-            with open(csv_read_terms(), "r") as term_csv:
-                term_reader = csv.DictReader(term_csv)
-                for terms in term_reader:
-                    term = terms["term"]
-                    research_term_in_city(villes, creation_fichier, term, infos)
+            # with open(csv_read_terms(), "r") as term_csv:
+            #     term_reader = csv.DictReader(term_csv)
+            #     for terms in term_reader:
+                    # term = terms["term"]
+            term = "Police OR Sûreté"
+            research_term_in_city(villes, creation_fichier, term, infos)
 
             #process_term(villes, creation_fichier, infos)
                 
