@@ -71,6 +71,11 @@ def get_current_time():
 
     return now.strftime('%Y-%m-%d')
 
+def get_full_current_time():
+
+    return datetime.now('%Y-%m-$d %H:%M:%S')
+
+
 
 # Le profil pour le navigateur lors de la saisie ---->
 def create_robot_profile(infos) -> FirefoxOptions:
@@ -175,9 +180,8 @@ def write_article_to_csv(creation_fichier, villes, term, n, article) -> None:
     titre_article = get_article_title(article)
     date = get_article_date(article)
     days_diff = calculate_days_diff(article)
+    #time_stamp = get_full_current_time()
 
-    # # type de médias --->
-    # type_media = "impossible à déterminer pour l'instant"
     csv_rows = [villes, term, n, nom_media, titre_article, date, days_diff, lien_article]
     print(csv_rows)
     creation_fichier.writerow(csv_rows)
@@ -198,13 +202,12 @@ def research_term_in_city(villes, creation_fichier, term, infos) -> None:
 
 def process_city(i: int, city: dict) -> None:
     infos = [city["ville"], city["latitude"], city["longitude"]]
-    #if i < 1:
     print("<>" * 32)
     villes = infos[0]  # imprimer juste les villes
 
     with safe_open_w(create_path_document_csv(villes)) as f2:
         creation_fichier = csv.writer(f2)
-        creation_fichier.writerow(["Villes", "Mots-clés", "position du média", "Nom du média", "Titre de l'article", "Date de publication", "Journée de différence","URL"])
+        creation_fichier.writerow(["Villes", "Mots-clés", "position du média", "Nom du média", "Titre de l'article", "Date de publication", "Journée de différence","URL", "date et heure saisie"])
         local = termes[0]
         national = termes[1]
         mixte = termes[2]
@@ -212,12 +215,11 @@ def process_city(i: int, city: dict) -> None:
             research_term_in_city(villes, creation_fichier, term, infos)                
 
 def main() -> None:
-    # ouvrir le fichier csv contenant les données.
-    # with open(csv_read_city(), "r") as ville_csv:
-    #     ville_reader = csv.DictReader(ville_csv)
-    for i, city in enumerate(cities):
-        print(type(city))
-        process_city(i, city)
+    for i in range(21,41):
+        
+        for city in cities:
+            print(type(city))
+            process_city(i, city)
 
 
 if __name__ == "__main__":
