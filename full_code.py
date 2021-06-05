@@ -4,6 +4,8 @@
 import csv, errno, os, os.path, requests, time
 
 from datetime import datetime
+
+from urllib3 import filepost
 from googleQuebec import termes, cities, montreal
 from selenium import webdriver
 from selenium.common.exceptions import NoSuchElementException
@@ -39,15 +41,21 @@ def mkdir_p(path):
 def create_path_document(villes):
     root = "./"
     saisie = "Saisie" + "_" + get_current_time() + "/"
-    path = villes + "/"
+    #path = villes + "/"
 
-    return root + saisie + path
+    return root + saisie
 
 
 def create_path_document_csv(villes):
-    file = villes.replace(" ", "") + "_" + get_current_time() + ".csv"
+    file = villes.replace(" ", "") + "_"
+    term_type = "National" + ".csv"
 
-    return create_path_document(villes) + file
+    return create_path_document(villes) + file + term_type
+
+def confirm_path_document_txt(villes):
+    file_name = create_path_document(villes) + "localisation_" + villes.replace(" ", "") + ".txt"
+
+    return file_name
 
 
 # Open "path" for writing, creating any parent directories as needed.
@@ -73,7 +81,7 @@ def get_current_time():
 
 def get_full_current_time():
 
-    return datetime.now('%Y-%m-$d %H:%M:%S')
+    return datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
 
 
@@ -102,8 +110,8 @@ def create_robot_profile(infos) -> FirefoxOptions:
 
 
 # Confirmer que la localisation est bonne -->
-def get_localisation_confirmation(infos : str, villes : str):
-    if os.path.exists(create_path_document(villes) + "localisation.txt") :
+def get_localisation_confirmation(infos : str, villes : str) -> filepost:
+    if os.path.exists(confirm_path_document_txt(villes)) :
         pass
 
     else : 
@@ -113,7 +121,9 @@ def get_localisation_confirmation(infos : str, villes : str):
         location = browser.find_element_by_id("locationname").text
         latitude = browser.find_element_by_id("latitude").text
         longitude = browser.find_element_by_id("longitude").text
-        f = open(create_path_document(villes) + "localisation.txt", "w")
+
+
+        f = open(confirm_path_document_txt(villes), "w")
         f.write("Latitude : " + latitude + " " + "Longitude : " + longitude + "\n\n")
         f.write("L'ADRESSE EXACTE EST : " + location)
         f.close()
@@ -180,9 +190,9 @@ def write_article_to_csv(creation_fichier, villes, term, n, article) -> None:
     titre_article = get_article_title(article)
     date = get_article_date(article)
     days_diff = calculate_days_diff(article)
-    #time_stamp = get_full_current_time()
+    time_stamp = get_full_current_time()
 
-    csv_rows = [villes, term, n, nom_media, titre_article, date, days_diff, lien_article]
+    csv_rows = [villes, term, n, nom_media, titre_article, date, days_diff, lien_article, time_stamp]
     print(csv_rows)
     creation_fichier.writerow(csv_rows)
 
@@ -193,7 +203,7 @@ def research_term_in_city(villes, creation_fichier, term, infos) -> None:
     browser.get(get_full_url(term, villes))
 
     for n, article in enumerate(get_articles(browser)):
-        if n < 10:
+        if n < 5:
             write_article_to_csv(creation_fichier, villes, term, n+1, article)
 
 
@@ -211,15 +221,14 @@ def process_city(i: int, city: dict) -> None:
         local = termes[0]
         national = termes[1]
         mixte = termes[2]
-        for term in local:
+        for term in national:
             research_term_in_city(villes, creation_fichier, term, infos)                
 
 def main() -> None:
-    for i in range(21,41):
-        
-        for city in cities:
-            print(type(city))
-            process_city(i, city)
+
+    for i, city in enumerate(cities[22:24]):
+        print(type(city))
+        process_city(i, city)
 
 
 if __name__ == "__main__":
