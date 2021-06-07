@@ -150,21 +150,20 @@ def get_article_date(article : WebElement) -> str:
 
 def get_article_title(article) -> str:
     try : 
-        titre_article = article.find_element_by_tag_name("h3").text
+        titre_article = article.find_element_by_tag_name("h3").get_attribute("outerHTML").split('>')[2].split('>')[0]
 
         return titre_article
 
     except NoSuchElementException :
-        titre_article =  article.find_element_by_tag_name("h4").text
+        titre_article =  article.find_element_by_tag_name("h4").get_attribute("outerHTML").split('>')[2].split('<')[0]
 
         return titre_article
 
-
 def get_media_name(article) -> str:
 
-    media = article.find_element_by_class_name("SVJrMe").find_element_by_tag_name("a")
+    media = article.find_element_by_class_name("SVJrMe").find_element_by_tag_name("a").get_attribute("outerHTML").split(">")[1].split('<')[0]
 
-    return media.text
+    return media
 
 def get_articles(browser) -> list:
     main_page = WebDriverWait(browser, 10).until(EC.presence_of_element_located((By.TAG_NAME, "main")))
@@ -203,7 +202,7 @@ def research_term_in_city(villes, creation_fichier, term, infos) -> None:
     browser.get(get_full_url(term, villes))
 
     for n, article in enumerate(get_articles(browser)):
-        if n < 5:
+        if n < 10:
             write_article_to_csv(creation_fichier, villes, term, n+1, article)
 
 
@@ -221,12 +220,12 @@ def process_city(i: int, city: dict) -> None:
         local = termes[0]
         national = termes[1]
         mixte = termes[2]
-        for term in national:
+        for term in local:
             research_term_in_city(villes, creation_fichier, term, infos)                
 
 def main() -> None:
 
-    for i, city in enumerate(cities[22:24]):
+    for i, city in enumerate(cities[0:3]):
         print(type(city))
         process_city(i, city)
 
