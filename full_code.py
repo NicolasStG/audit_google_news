@@ -48,7 +48,7 @@ def create_path_document(villes):
 
 def create_path_document_csv(villes):
     file = villes.replace(" ", "") + "_"
-    term_type = "National" + ".csv"
+    term_type = "Mixte" + ".csv"
 
     return create_path_document(villes) + file + term_type
 
@@ -150,7 +150,7 @@ def get_article_date(article : WebElement) -> str:
 
 def get_article_title(article) -> str:
     try : 
-        titre_article = article.find_element_by_tag_name("h3").get_attribute("outerHTML").split('>')[2].split('>')[0]
+        titre_article = article.find_element_by_tag_name("h3").get_attribute("outerHTML").split('>')[2].split('<')[0]
 
         return titre_article
 
@@ -220,12 +220,12 @@ def process_city(i: int, city: dict) -> None:
         local = termes[0]
         national = termes[1]
         mixte = termes[2]
-        for term in local:
+        for term in mixte:
             research_term_in_city(villes, creation_fichier, term, infos)                
 
 def main() -> None:
 
-    for i, city in enumerate(cities[0:3]):
+    for i, city in enumerate(cities[0:1]):
         print(type(city))
         process_city(i, city)
 
