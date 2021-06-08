@@ -209,7 +209,7 @@ def research_term_in_city(villes, creation_fichier, term, infos) -> None:
     get_localisation_confirmation(infos, villes)
     browser.close()
 
-def process_city(city: dict) -> None:
+def process_city(i : int, city: dict) -> None:
     infos = [city["ville"], city["latitude"], city["longitude"]]
     print("<>" * 32)
     villes = infos[0]  # imprimer juste les villes
