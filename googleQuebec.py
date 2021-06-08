@@ -1,18 +1,18 @@
 termes = [
 	[
-		'accident',
-		'décès OR mort',
-		'incendie',
-		'police OR Sûreté',
-		'Cégep',
+		'"accident"',
+		'"décès" OR "mort"',
+		'"incendie"',
+		'"police" OR "Sûreté"',
+		'"Cégep"',
 		'"Centre de services scolaire" OR "Commission scolaire"',
-		'CISSS OR CIUSSS',
-		'maire OR mairesse',
-		'candidat',
-		'préfet',
-		'travaux routiers',
-		'autobus OR tramway',
-    'météo'
+		'"CISSS" OR "CIUSSS"',
+		'"maire" OR "mairesse"',
+		'"candidat"',
+		'"préfet"',
+		'"travaux routiers"',
+		'"autobus" OR "tramway"',
+    '"météo"'
 	],
 	[
 		'élection OR campagne',
@@ -23,13 +23,13 @@ termes = [
 		'construction'
 	],
 	[
-		'premier ministre',
-    'climat',
-    'immigration',
-    'racisme',
-    'Chine',
-		'Biden OR Trump',
-		'déficit'
+		'"premier ministre"',
+    '"climat"',
+    '"immigration"',
+    '"racisme"',
+    '"Chine"',
+		'"Biden" OR "Trump"',
+		'"déficit"'
 	]
 ]
 
