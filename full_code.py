@@ -21,7 +21,7 @@ from selenium.webdriver.support import expected_conditions as EC
 #########################
 
 # Lien qu'utilise le bot pour récupérer les données ------>
-def get_full_url(term, villes):
+def get_full_url(term : str, villes : str):
     base_url = "https://news.google.com/search?q="
     return base_url + term + "%20près%20de%20" + villes
 
@@ -30,7 +30,7 @@ def get_full_url(term, villes):
 def mkdir_p(path):
     try:
         os.makedirs(path)
-    except OSError as exc:  # Python >2.5
+    except OSError as exc:
         if exc.errno == errno.EEXIST and os.path.isdir(path):
             pass
         else:
@@ -38,7 +38,7 @@ def mkdir_p(path):
 
 #faudrait ajouter que si le directory existe qu'il ajoute le fichier directement dedans et non pas qu'il le overwrite.
 
-def create_path_document(villes):
+def create_path_document():
     root = "./"
     saisie = "Saisie" + "_" + get_current_time() + "/"
     #path = villes + "/"
@@ -50,10 +50,10 @@ def create_path_document_csv(villes):
     file = villes.replace(" ", "") + "_"
     term_type = "Mixte" + ".csv"
 
-    return create_path_document(villes) + file + term_type
+    return create_path_document() + file + term_type
 
 def confirm_path_document_txt(villes):
-    file_name = create_path_document(villes) + "localisation_" + villes.replace(" ", "") + ".txt"
+    file_name = create_path_document() + "localisation_" + villes.replace(" ", "") + ".txt"
 
     return file_name
 
@@ -130,7 +130,7 @@ def get_localisation_confirmation(infos : str, villes : str) -> filepost:
         browser.close()
 
 
-def get_article_url(article) -> str:
+def get_article_url(article : WebElement) -> str:
     #URL ---> DÉTERMINER COMMENT DIFFÉRENCIER LOCAL, NATIONAL, RÉGIONAL ET HORS-CANADA
     lien_article = article.find_element_by_class_name("VDXfz").get_attribute('href')
     r = requests.get(lien_article, allow_redirects=False)
@@ -148,7 +148,7 @@ def get_article_date(article : WebElement) -> str:
 
         return ""
 
-def get_article_title(article) -> str:
+def get_article_title(article : WebElement) -> str:
     try : 
         titre_article = article.find_element_by_tag_name("h3").get_attribute("outerHTML").split('>')[2].split('<')[0]
 
@@ -159,7 +159,7 @@ def get_article_title(article) -> str:
 
         return titre_article
 
-def get_media_name(article) -> str:
+def get_media_name(article : WebElement) -> str:
 
     media = article.find_element_by_class_name("SVJrMe").find_element_by_tag_name("a").get_attribute("outerHTML").split(">")[1].split('<')[0]
 
@@ -170,7 +170,7 @@ def get_articles(browser) -> list:
     
     return main_page.find_elements_by_tag_name("article")
 
-def calculate_days_diff(article):
+def calculate_days_diff(article : WebElement):
 
     try :
         date_saisie = get_current_time()
@@ -202,14 +202,14 @@ def research_term_in_city(villes, creation_fichier, term, infos) -> None:
     browser.get(get_full_url(term, villes))
 
     for n, article in enumerate(get_articles(browser)):
-        if n < 10:
+        if n < 25:
             write_article_to_csv(creation_fichier, villes, term, n+1, article)
 
 
     get_localisation_confirmation(infos, villes)
     browser.close()
 
-def process_city(i: int, city: dict) -> None:
+def process_city(city: dict) -> None:
     infos = [city["ville"], city["latitude"], city["longitude"]]
     print("<>" * 32)
     villes = infos[0]  # imprimer juste les villes
@@ -226,7 +226,6 @@ def process_city(i: int, city: dict) -> None:
 def main() -> None:
 
     for i, city in enumerate(cities[0:1]):
-        print(type(city))
         process_city(i, city)
 
 
