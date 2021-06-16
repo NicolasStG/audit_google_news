@@ -53,9 +53,10 @@ def create_path_document_csv(villes):
     return create_path_document() + file + term_type
 
 def confirm_path_document_txt(villes):
-    file_name = create_path_document() + "localisation_" + villes.replace(" ", "") + ".txt"
+    file_name = create_path_document() + "localisation_" + villes.replace(" ", "") + "_" 
+    file_type = file_name + "Local" + "_" +".txt"
 
-    return file_name
+    return file_type
 
 
 # Open "path" for writing, creating any parent directories as needed.
