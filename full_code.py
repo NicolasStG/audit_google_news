@@ -48,7 +48,7 @@ def create_path_document():
 
 def create_path_document_csv(villes):
     file = villes.replace(" ", "") + "_"
-    term_type = "Mixte" + ".csv"
+    term_type = "Local" + ".csv"
 
     return create_path_document() + file + term_type
 
@@ -220,12 +220,13 @@ def process_city(i : int, city: dict) -> None:
         local = termes[0]
         national = termes[1]
         mixte = termes[2]
-        for term in mixte:
+        for term in local:
+            print(term)
             research_term_in_city(villes, creation_fichier, term, infos)                
 
 def main() -> None:
 
-    for i, city in enumerate(cities[0:1]):
+    for i, city in enumerate(cities[19:21]):
         process_city(i, city)
 
 
