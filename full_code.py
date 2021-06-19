@@ -46,15 +46,15 @@ def create_path_document():
     return root + saisie
 
 
-def create_path_document_csv(villes):
+def create_path_document_csv(villes): #csvfilename
     file = villes.replace(" ", "") + "_"
-    term_type = "Local" + ".csv"
+    term_type = "National" + ".csv"
 
     return create_path_document() + file + term_type
 
-def confirm_path_document_txt(villes):
+def confirm_path_document_txt(villes): #txtfilename
     file_name = create_path_document() + "localisation_" + villes.replace(" ", "") + "_" 
-    file_type = file_name + "Local" + "_" +".txt"
+    file_type = file_name + "National" + "_" +".txt"
 
     return file_type
 
@@ -221,13 +221,13 @@ def process_city(i : int, city: dict) -> None:
         local = termes[0]
         national = termes[1]
         mixte = termes[2]
-        for term in local:
+        for term in national: #termin_variable_
             print(term)
             research_term_in_city(villes, creation_fichier, term, infos)                
 
 def main() -> None:
 
-    for i, city in enumerate(cities[19:21]):
+    for i, city in enumerate(cities[15:16]): #indexrange
         process_city(i, city)
 
 
