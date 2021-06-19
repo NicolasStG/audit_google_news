@@ -46,16 +46,17 @@ def create_path_document():
     return root + saisie
 
 
-def create_path_document_csv(villes): #csv file name
+def create_path_document_csv(villes): #csvfilename
     file = villes.replace(" ", "") + "_"
     term_type = "National" + ".csv"
 
     return create_path_document() + file + term_type
 
-def confirm_path_document_txt(villes):
-    file_name = create_path_document() + "localisation_" + villes.replace(" ", "") + ".txt"
+def confirm_path_document_txt(villes): #txtfilename
+    file_name = create_path_document() + "localisation_" + villes.replace(" ", "") + "_" 
+    file_type = file_name + "National" + "_" +".txt"
 
-    return file_name
+    return file_type
 
 
 # Open "path" for writing, creating any parent directories as needed.
@@ -220,13 +221,14 @@ def process_city(i : int, city: dict) -> None:
         local = termes[0]
         national = termes[1]
         mixte = termes[2]
-        for term in national: #for term in variable
+        for term in national: #termin_variable_
+            print(term)
             research_term_in_city(villes, creation_fichier, term, infos)                
 
 def main() -> None:
 
-    for i, city in enumerate(cities[0:21]): #index range
-        process_city(city)
+    for i, city in enumerate(cities[0:21]): #indexrange
+        process_city(i, city)
 
 
 if __name__ == "__main__":
