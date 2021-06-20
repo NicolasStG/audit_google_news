@@ -1,7 +1,7 @@
 # coding: utf-8
 # ©2020 Nicolas St-Germain GNU GPL v3.
 
-import csv, errno, os, os.path, requests, time
+import csv, errno, os, os.path, re, requests, time
 
 from datetime import datetime
 
@@ -48,13 +48,13 @@ def create_path_document():
 
 def create_path_document_csv(villes): #csvfilename
     file = villes.replace(" ", "") + "_"
-    term_type = "National" + ".csv"
+    term_type = "Local" + "_" + get_current_time() + ".csv"
 
     return create_path_document() + file + term_type
 
 def confirm_path_document_txt(villes): #txtfilename
     file_name = create_path_document() + "localisation_" + villes.replace(" ", "") + "_" 
-    file_type = file_name + "National" + "_" +".txt"
+    file_type = file_name + "Local" + ".txt"
 
     return file_type
 
@@ -151,20 +151,24 @@ def get_article_date(article : WebElement) -> str:
 
 def get_article_title(article : WebElement) -> str:
     try : 
-        titre_article = article.find_element_by_tag_name("h3").get_attribute("outerHTML").split('>')[2].split('<')[0]
+        titre_article = article.find_element_by_tag_name("h3").get_attribute("outerHTML")
+        m = re.search('DY5T1d RZIKme">(.+?)</a></h3>', titre_article).group(1)
 
-        return titre_article
+        return m
 
     except NoSuchElementException :
-        titre_article =  article.find_element_by_tag_name("h4").get_attribute("outerHTML").split('>')[2].split('<')[0]
+        titre_article =  article.find_element_by_tag_name("h4").get_attribute("outerHTML")
+        m = re.search('DY5T1d RZIKme">(.+?)</a></h4>', titre_article).group(1)
 
-        return titre_article
+        return m
 
 def get_media_name(article : WebElement) -> str:
 
-    media = article.find_element_by_class_name("SVJrMe").find_element_by_tag_name("a").get_attribute("outerHTML").split(">")[1].split('<')[0]
+    media = article.find_element_by_class_name("SVJrMe").find_element_by_tag_name("a").get_attribute("outerHTML")
 
-    return media
+    name_media = re.search('data-n-tid="9">(.+?)</a>', media).group(1)
+
+    return name_media
 
 def get_articles(browser) -> list:
     main_page = WebDriverWait(browser, 10).until(EC.presence_of_element_located((By.TAG_NAME, "main")))
@@ -203,7 +207,7 @@ def research_term_in_city(villes, creation_fichier, term, infos) -> None:
     browser.get(get_full_url(term, villes))
 
     for n, article in enumerate(get_articles(browser)):
-        if n < 25:
+        if n < 25: #numbergrab
             write_article_to_csv(creation_fichier, villes, term, n+1, article)
 
 
@@ -221,13 +225,13 @@ def process_city(i : int, city: dict) -> None:
         local = termes[0]
         national = termes[1]
         mixte = termes[2]
-        for term in national: #termin_variable_
+        for term in local: #termin_variable_
             print(term)
             research_term_in_city(villes, creation_fichier, term, infos)                
 
 def main() -> None:
 
-    for i, city in enumerate(cities[15:16]): #indexrange
+    for i, city in enumerate(cities[0:21]): #indexrange
         process_city(i, city)
 
 

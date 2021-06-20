@@ -28,7 +28,7 @@ termes = [
     'immigration',
     'racisme',
     'Chine',
-		'Biden" OR "Trump',
+		'Biden OR Trump',
 		'déficit'
 	]
 ]
