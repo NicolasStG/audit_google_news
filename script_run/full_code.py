@@ -1,5 +1,7 @@
+#!/Users/goognewsqc/audit_google_news/env/bin/python
+
 # coding: utf-8
-# ©2020 Nicolas St-Germain GNU GPL v3.
+# ©2020 Ni colas St-Germain GNU GPL v3.
 
 import csv, errno, os, os.path, re, requests, time
 
@@ -39,7 +41,7 @@ def mkdir_p(path):
 #faudrait ajouter que si le directory existe qu'il ajoute le fichier directement dedans et non pas qu'il le overwrite.
 
 def create_path_document():
-    root = "./"
+    root = "./audit_google_news/"
     saisie = "Saisie" + "_" + get_current_time() + "/"
     #path = villes + "/"
 

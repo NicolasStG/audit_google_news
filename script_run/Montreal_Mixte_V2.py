@@ -41,7 +41,7 @@ def mkdir_p(path):
 #faudrait ajouter que si le directory existe qu'il ajoute le fichier directement dedans et non pas qu'il le overwrite.
 
 def create_path_document():
-    root = "./"
+    root = "./audit_google_news/"
     saisie = "Saisie" + "_" + get_current_time() + "/"
     #path = villes + "/"
 
