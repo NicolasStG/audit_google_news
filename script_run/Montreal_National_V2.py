@@ -1,4 +1,6 @@
-# coding: utf-8
+#!/Users/goognewsqc/audit_google_news/env/bin/python
+
+# # coding: utf-8
 # ©2020 Nicolas St-Germain GNU GPL v3.
 
 import csv, errno, os, os.path, re, requests, time
@@ -227,6 +229,7 @@ def process_city(city: dict) -> None:
         mixte = termes[2]
         for term in national: #termin_variable_
             print(term)
+            print(get_full_current_time())
             research_term_in_city(villes, creation_fichier, term, infos)                
 
 def main() -> None:

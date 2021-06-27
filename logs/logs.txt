@@ -1,0 +1,383 @@
+<><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><>
+élection OR campagne
+Traceback (most recent call last):
+  File "/Users/goognewsqc/audit_google_news/env/lib/python3.9/site-packages/selenium/webdriver/common/service.py", line 72, in start
+    self.process = subprocess.Popen(cmd, env=self.env,
+  File "/usr/local/Cellar/python@3.9/3.9.5/Frameworks/Python.framework/Versions/3.9/lib/python3.9/subprocess.py", line 951, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/usr/local/Cellar/python@3.9/3.9.5/Frameworks/Python.framework/Versions/3.9/lib/python3.9/subprocess.py", line 1821, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'geckodriver'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/goognewsqc/audit_google_news/script_run/Montreal_National_V2.py", line 239, in <module>
+    main()
+  File "/Users/goognewsqc/audit_google_news/script_run/Montreal_National_V2.py", line 235, in main
+    process_city(city)
+  File "/Users/goognewsqc/audit_google_news/script_run/Montreal_National_V2.py", line 230, in process_city
+    research_term_in_city(villes, creation_fichier, term, infos)                
+  File "/Users/goognewsqc/audit_google_news/script_run/Montreal_National_V2.py", line 205, in research_term_in_city
+    browser = webdriver.Firefox(options=create_robot_profile(infos))
+  File "/Users/goognewsqc/audit_google_news/env/lib/python3.9/site-packages/selenium/webdriver/firefox/webdriver.py", line 164, in __init__
+    self.service.start()
+  File "/Users/goognewsqc/audit_google_news/env/lib/python3.9/site-packages/selenium/webdriver/common/service.py", line 81, in start
+    raise WebDriverException(
+selenium.common.exceptions.WebDriverException: Message: 'geckodriver' executable needs to be in PATH. 
+
+<><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><>
+élection OR campagne
+Traceback (most recent call last):
+  File "/Users/goognewsqc/audit_google_news/env/lib/python3.9/site-packages/selenium/webdriver/common/service.py", line 72, in start
+    self.process = subprocess.Popen(cmd, env=self.env,
+  File "/usr/local/Cellar/python@3.9/3.9.5/Frameworks/Python.framework/Versions/3.9/lib/python3.9/subprocess.py", line 951, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/usr/local/Cellar/python@3.9/3.9.5/Frameworks/Python.framework/Versions/3.9/lib/python3.9/subprocess.py", line 1821, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'geckodriver'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/goognewsqc/audit_google_news/script_run/Montreal_National_V2.py", line 239, in <module>
+    main()
+  File "/Users/goognewsqc/audit_google_news/script_run/Montreal_National_V2.py", line 235, in main
+    process_city(city)
+  File "/Users/goognewsqc/audit_google_news/script_run/Montreal_National_V2.py", line 230, in process_city
+    research_term_in_city(villes, creation_fichier, term, infos)                
+  File "/Users/goognewsqc/audit_google_news/script_run/Montreal_National_V2.py", line 205, in research_term_in_city
+    browser = webdriver.Firefox(options=create_robot_profile(infos))
+  File "/Users/goognewsqc/audit_google_news/env/lib/python3.9/site-packages/selenium/webdriver/firefox/webdriver.py", line 164, in __init__
+    self.service.start()
+  File "/Users/goognewsqc/audit_google_news/env/lib/python3.9/site-packages/selenium/webdriver/common/service.py", line 81, in start
+    raise WebDriverException(
+selenium.common.exceptions.WebDriverException: Message: 'geckodriver' executable needs to be in PATH. 
+
+/bin/sh: /Users/goognewsqc/audit_google_news/env/bin: is a directory
+/bin/sh: /Users/goognewsqc/audit_google_news/env/bin: is a directory
+<><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><>
+élection OR campagne
+2021-06-24 17:26:00
+Traceback (most recent call last):
+  File "/Users/goognewsqc/audit_google_news/env/lib/python3.9/site-packages/selenium/webdriver/common/service.py", line 72, in start
+    self.process = subprocess.Popen(cmd, env=self.env,
+  File "/usr/local/Cellar/python@3.9/3.9.5/Frameworks/Python.framework/Versions/3.9/lib/python3.9/subprocess.py", line 951, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/usr/local/Cellar/python@3.9/3.9.5/Frameworks/Python.framework/Versions/3.9/lib/python3.9/subprocess.py", line 1821, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'geckodriver'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/goognewsqc/audit_google_news/script_run/Montreal_National_V2.py", line 240, in <module>
+    main()
+  File "/Users/goognewsqc/audit_google_news/script_run/Montreal_National_V2.py", line 236, in main
+    process_city(city)
+  File "/Users/goognewsqc/audit_google_news/script_run/Montreal_National_V2.py", line 231, in process_city
+    research_term_in_city(villes, creation_fichier, term, infos)                
+  File "/Users/goognewsqc/audit_google_news/script_run/Montreal_National_V2.py", line 205, in research_term_in_city
+    browser = webdriver.Firefox(options=create_robot_profile(infos))
+  File "/Users/goognewsqc/audit_google_news/env/lib/python3.9/site-packages/selenium/webdriver/firefox/webdriver.py", line 164, in __init__
+    self.service.start()
+  File "/Users/goognewsqc/audit_google_news/env/lib/python3.9/site-packages/selenium/webdriver/common/service.py", line 81, in start
+    raise WebDriverException(
+selenium.common.exceptions.WebDriverException: Message: 'geckodriver' executable needs to be in PATH. 
+
+/Users/goognewsqc/audit_google_news/env/bin/activate.csh: line 8: alias: deactivate: not found
+/Users/goognewsqc/audit_google_news/env/bin/activate.csh: line 8: alias: `test $?_OLD_VIRTUAL_PATH !': invalid alias name
+/Users/goognewsqc/audit_google_news/env/bin/activate.csh: line 11: deactivate: command not found
+/Users/goognewsqc/audit_google_news/env/bin/activate.csh: line 13: setenv: command not found
+/Users/goognewsqc/audit_google_news/env/bin/activate.csh: line 16: setenv: command not found
+/Users/goognewsqc/audit_google_news/env/bin/activate.csh: line 32: syntax error near unexpected token `else'
+/Users/goognewsqc/audit_google_news/env/bin/activate.csh: line 32: `else'
+<><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><>
+élection OR campagne
+2021-06-25 15:31:00
+Traceback (most recent call last):
+  File "/Users/goognewsqc/audit_google_news/env/lib/python3.9/site-packages/selenium/webdriver/common/service.py", line 72, in start
+    self.process = subprocess.Popen(cmd, env=self.env,
+  File "/usr/local/Cellar/python@3.9/3.9.5/Frameworks/Python.framework/Versions/3.9/lib/python3.9/subprocess.py", line 951, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/usr/local/Cellar/python@3.9/3.9.5/Frameworks/Python.framework/Versions/3.9/lib/python3.9/subprocess.py", line 1821, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'geckodriver'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/goognewsqc/audit_google_news/script_run/Montreal_National_V2.py", line 242, in <module>
+    main()
+  File "/Users/goognewsqc/audit_google_news/script_run/Montreal_National_V2.py", line 238, in main
+    process_city(city)
+  File "/Users/goognewsqc/audit_google_news/script_run/Montreal_National_V2.py", line 233, in process_city
+    research_term_in_city(villes, creation_fichier, term, infos)                
+  File "/Users/goognewsqc/audit_google_news/script_run/Montreal_National_V2.py", line 207, in research_term_in_city
+    browser = webdriver.Firefox(options=create_robot_profile(infos))
+  File "/Users/goognewsqc/audit_google_news/env/lib/python3.9/site-packages/selenium/webdriver/firefox/webdriver.py", line 164, in __init__
+    self.service.start()
+  File "/Users/goognewsqc/audit_google_news/env/lib/python3.9/site-packages/selenium/webdriver/common/service.py", line 81, in start
+    raise WebDriverException(
+selenium.common.exceptions.WebDriverException: Message: 'geckodriver' executable needs to be in PATH. 
+
+/bin/sh: /Users/goognewsqc/audit_google_news/script_run/Montreal_National_V2.py: Permission denied
+/Users/goognewsqc/audit_google_news/script_run/Montreal_National_V2.py: line 6: import: command not found
+from: can't read /var/mail/datetime
+from: can't read /var/mail/urllib3
+from: can't read /var/mail/googleQuebec
+from: can't read /var/mail/selenium
+from: can't read /var/mail/selenium.common.exceptions
+from: can't read /var/mail/selenium.webdriver
+from: can't read /var/mail/selenium.webdriver.remote.webelement
+from: can't read /var/mail/selenium.webdriver.common.by
+from: can't read /var/mail/selenium.webdriver.firefox.options
+from: can't read /var/mail/selenium.webdriver.support.ui
+from: can't read /var/mail/selenium.webdriver.support
+/Users/goognewsqc/audit_google_news/script_run/Montreal_National_V2.py: line 26: syntax error near unexpected token `('
+/Users/goognewsqc/audit_google_news/script_run/Montreal_National_V2.py: line 26: `def get_full_url(term : str):'
+/Users/goognewsqc/audit_google_news/script_run/Montreal_National_V2.py: line 6: import: command not found
+from: can't read /var/mail/datetime
+from: can't read /var/mail/urllib3
+from: can't read /var/mail/googleQuebec
+from: can't read /var/mail/selenium
+from: can't read /var/mail/selenium.common.exceptions
+from: can't read /var/mail/selenium.webdriver
+from: can't read /var/mail/selenium.webdriver.remote.webelement
+from: can't read /var/mail/selenium.webdriver.common.by
+from: can't read /var/mail/selenium.webdriver.firefox.options
+from: can't read /var/mail/selenium.webdriver.support.ui
+from: can't read /var/mail/selenium.webdriver.support
+/Users/goognewsqc/audit_google_news/script_run/Montreal_National_V2.py: line 26: syntax error near unexpected token `('
+/Users/goognewsqc/audit_google_news/script_run/Montreal_National_V2.py: line 26: `def get_full_url(term : str):'
+/Users/goognewsqc/audit_google_news/script_run/Montreal_National_V2.py: line 6: import: command not found
+from: can't read /var/mail/datetime
+from: can't read /var/mail/urllib3
+from: can't read /var/mail/googleQuebec
+from: can't read /var/mail/selenium
+from: can't read /var/mail/selenium.common.exceptions
+from: can't read /var/mail/selenium.webdriver
+from: can't read /var/mail/selenium.webdriver.remote.webelement
+from: can't read /var/mail/selenium.webdriver.common.by
+from: can't read /var/mail/selenium.webdriver.firefox.options
+from: can't read /var/mail/selenium.webdriver.support.ui
+from: can't read /var/mail/selenium.webdriver.support
+/Users/goognewsqc/audit_google_news/script_run/Montreal_National_V2.py: line 26: syntax error near unexpected token `('
+/Users/goognewsqc/audit_google_news/script_run/Montreal_National_V2.py: line 26: `def get_full_url(term : str):'
+/Users/goognewsqc/audit_google_news/script_run/Montreal_National_V2.py: line 6: import: command not found
+from: can't read /var/mail/datetime
+from: can't read /var/mail/urllib3
+from: can't read /var/mail/googleQuebec
+from: can't read /var/mail/selenium
+from: can't read /var/mail/selenium.common.exceptions
+from: can't read /var/mail/selenium.webdriver
+from: can't read /var/mail/selenium.webdriver.remote.webelement
+from: can't read /var/mail/selenium.webdriver.common.by
+from: can't read /var/mail/selenium.webdriver.firefox.options
+from: can't read /var/mail/selenium.webdriver.support.ui
+from: can't read /var/mail/selenium.webdriver.support
+/Users/goognewsqc/audit_google_news/script_run/Montreal_National_V2.py: line 26: syntax error near unexpected token `('
+/Users/goognewsqc/audit_google_news/script_run/Montreal_National_V2.py: line 26: `def get_full_url(term : str):'
+/bin/sh: /Users/goognewsqc/audit_google_news/script_run/Montreal_National_V2.py: /goognewsqc/audit_google_news/env/bin: bad interpreter: No such file or directory
+/bin/sh: /Users/goognewsqc/audit_google_news/script_run/Montreal_National_V2.py: /goognewsqc/audit_google_news/env/bin/python3.9: bad interpreter: No such file or directory
+/bin/sh: /Users/goognewsqc/audit_google_news/script_run/Montreal_National_V2.py: /Users/goognewsqc/audit_google_news/env/bin: bad interpreter: Permission denied
+/bin/sh: /Users/goognewsqc/audit_google_news/script_run/Montreal_National_V2.py: /Users/goognewsqc/audit_google_news/env/bin: bad interpreter: Permission denied
+/bin/sh: /Users/goognewsqc/audit_google_news/script_run/Montreal_National_V2.py: /Users/goognewsqc/audit_google_news/env/bin: bad interpreter: Permission denied
+/bin/sh: /Users/goognewsqc/audit_google_news/script_run/Montreal_National_V2.py: /Users/goognewsqc/audit_google_news/env/bin: bad interpreter: Permission denied
+/bin/sh: /Users/goognewsqc/audit_google_news/script_run/Montreal_National_V2.py: /Users/goognewsqc/audit_google_news/env/bin: bad interpreter: Permission denied
+/bin/sh: /Users/goognewsqc/audit_google_news/script_run/Montreal_National_V2.py: /Users/goognewsqc/audit_google_news/env/bin: bad interpreter: Permission denied
+/bin/sh: /Users/goognewsqc/audit_google_news/script_run/Montreal_National_V2.py: /Users/goognewsqc/audit_google_news/env/bin: bad interpreter: Permission denied
+/bin/sh: /Users/goognewsqc/audit_google_news/script_run/Montreal_National_V2.py: /Users/goognewsqc/audit_google_news/env/bin: bad interpreter: Permission denied
+<><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><>
+élection OR campagne
+2021-06-27 13:47:00
+Traceback (most recent call last):
+  File "/Users/goognewsqc/audit_google_news/env/lib/python3.9/site-packages/selenium/webdriver/common/service.py", line 72, in start
+    self.process = subprocess.Popen(cmd, env=self.env,
+  File "/usr/local/Cellar/python@3.9/3.9.5/Frameworks/Python.framework/Versions/3.9/lib/python3.9/subprocess.py", line 951, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/usr/local/Cellar/python@3.9/3.9.5/Frameworks/Python.framework/Versions/3.9/lib/python3.9/subprocess.py", line 1821, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'geckodriver'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/goognewsqc/audit_google_news/script_run/Montreal_National_V2.py", line 242, in <module>
+    main()
+  File "/Users/goognewsqc/audit_google_news/script_run/Montreal_National_V2.py", line 238, in main
+    process_city(city)
+  File "/Users/goognewsqc/audit_google_news/script_run/Montreal_National_V2.py", line 233, in process_city
+    research_term_in_city(villes, creation_fichier, term, infos)                
+  File "/Users/goognewsqc/audit_google_news/script_run/Montreal_National_V2.py", line 207, in research_term_in_city
+    browser = webdriver.Firefox(options=create_robot_profile(infos))
+  File "/Users/goognewsqc/audit_google_news/env/lib/python3.9/site-packages/selenium/webdriver/firefox/webdriver.py", line 164, in __init__
+    self.service.start()
+  File "/Users/goognewsqc/audit_google_news/env/lib/python3.9/site-packages/selenium/webdriver/common/service.py", line 81, in start
+    raise WebDriverException(
+selenium.common.exceptions.WebDriverException: Message: 'geckodriver' executable needs to be in PATH. 
+
+/bin/sh: /Users/goognewsqc/audit_google_news/script_run: is a directory
+<><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><>
+élection OR campagne
+2021-06-27 13:54:01
+['Montréal ', 'élection OR campagne', 1, 'Le Journal de Québec', 'Élection fédérales: tous les indicateurs sont en zone verte', '2021-06-26', 1, 'https://www.journaldequebec.com/2021/06/26/election-federales-tous-les-indicateurs-sont-en-zone-verte', '2021-06-27 13:54:07']
+['Montréal ', 'élection OR campagne', 2, 'ICI.Radio-Canada.ca', 'Élection à la présidence de la FCFA : quelle place accordée à la diversité?', '2021-06-26', 1, 'https://ici.radio-canada.ca/nouvelle/1804493/fcfa-francophonie-diversite-inclusion-elections-presidence', '2021-06-27 13:54:08']
+['Montréal ', 'élection OR campagne', 3, 'France Bleu', "Ce 27 juin est un nouveau dimanche d'élection(s) en Côte-d'Or", '2021-06-27', 0, 'https://www.francebleu.fr/infos/elections/ce-27-juin-est-un-nouveau-dimanche-d-election-s-en-cote-d-or-1624780649', '2021-06-27 13:54:08']
+['Montréal ', 'élection OR campagne', 4, 'L’actualité', 'Pourquoi une élection cet automne ?', '2021-06-23', 4, 'https://lactualite.com/politique/pourquoi-une-election-cet-automne/', '2021-06-27 13:54:08']
+['Montréal ', 'élection OR campagne', 5, 'Le Journal de Montréal', 'Devant des milliers de partisans, Trump lance la bataille pour les élections de mi-mandat', '2021-06-27', 0, 'https://www.journaldemontreal.com/2021/06/26/trump-retrouve-ses-partisans-sur-un-air-revanchard', '2021-06-27 13:54:08']
+['Montréal ', 'élection OR campagne', 6, "L'Éclaireur Progrès", 'Une initiative en appui à la campagne de vaccination', '2021-06-27', 0, 'https://www.leclaireurprogres.ca/une-initiative-en-appui-a-la-campagne-de-vaccination/', '2021-06-27 13:54:09']
+['Montréal ', 'élection OR campagne', 7, 'Le Figaro', 'Régionales : la campagne sur les réseaux sociaux pour inciter les jeunes à voter fait un flop', '2021-06-26', 1, 'https://www.lefigaro.fr/elections/regionales/regionales-la-campagne-sur-les-reseaux-sociaux-pour-inciter-les-jeunes-a-voter-fait-un-flop-20210626', '2021-06-27 13:54:09']
+['Montréal ', 'élection OR campagne', 8, 'La Tribune - Groupe Capitales Médias', "L'élection municipale pourrait coûter 329 962 $ de plus que prévu", '2021-06-22', 5, 'https://www.latribune.ca/actualites/elections-municipales-2021/lelection-municipale-pourrait-couter-329-962--de-plus-que-prevu-75e7237b21561bc21d14a3f9aee5fd63', '2021-06-27 13:54:09']
+['Montréal ', 'élection OR campagne', 9, 'La Presse', 'Élection au Pérou | Le camp Fujimori maintient ses accusations de « fraudes »', '2021-06-23', 4, 'https://www.lapresse.ca/international/amerique-latine/2021-06-23/election-au-perou/le-camp-fujimori-maintient-ses-accusations-de-fraudes.php', '2021-06-27 13:54:09']
+['Montréal ', 'élection OR campagne', 10, 'Le Devoir', 'Justin Trudeau semble se préparer à une campagne électorale dès cet automne', '2021-06-22', 5, 'https://www.ledevoir.com/politique/canada/613059/des-envies-electorales-a-peine-voilees', '2021-06-27 13:54:10']
+['Montréal ', 'élection OR campagne', 11, "L'Express - Drummondville", "Où s'en va l'élection municipale de Drummondville? (Tribune libre) - L'Express", '2021-06-23', 4, 'https://www.journalexpress.ca/2021/06/23/ou-sen-va-lelection-municipale-de-drummondville-tribune-libre/', '2021-06-27 13:54:10']
+['Montréal ', 'élection OR campagne', 12, 'Le Devoir', 'Fin du procès de la campagne de Nicolas Sarkozy en 2012', '2021-06-23', 4, 'https://www.ledevoir.com/monde/europe/613092/france-fin-du-proces-de-la-campagne-de-nicolas-sarkozy-en-2012', '2021-06-27 13:54:10']
+['Montréal ', 'élection OR campagne', 13, 'ladepeche.fr', "Lot : itinéraire d'un bulletin le jour d'une élection", '2021-06-27', 0, 'https://www.ladepeche.fr/2021/06/27/lot-itineraire-dun-bulletin-le-jour-dune-election-9634576.php', '2021-06-27 13:54:11']
+['Montréal ', 'élection OR campagne', 14, 'Linternaute.com', 'Sondages des régionales : qui a été donné en tête au 2e tour...', '2021-06-27', 0, 'https://www.linternaute.com/actualite/politique/2552128-sondages-des-regionales-qui-a-ete-donne-en-tete-au-2e-tour-de-l-election/', '2021-06-27 13:54:12']
+['Montréal ', 'élection OR campagne', 15, 'Vie publique.fr', 'Départementales et régionales 2021 : campagne électorale officielle', '2021-05-31', 27, 'https://www.vie-publique.fr/en-bref/280102-departementales-et-regionales-2021-campagne-electorale-officielle', '2021-06-27 13:54:13']
+['Montréal ', 'élection OR campagne', 16, 'ICI.Radio-Canada.ca', 'La campagne de vaccination va bon train dans le Nord-du-Québec', '2021-06-25', 2, 'https://ici.radio-canada.ca/nouvelle/1804524/vaccin-vaccination-covid-baie-james-nord-quebec', '2021-06-27 13:54:13']
+['Montréal ', 'élection OR campagne', 17, 'Libération', 'Les candidats ont-ils le droit d’envoyer des SMS de campagne ?', '2021-06-25', 2, 'https://www.liberation.fr/checknews/les-candidats-ont-ils-le-droit-denvoyer-des-sms-de-campagne-20210625_SELGCVGLOBERXLA5D2NEWMTCJA/', '2021-06-27 13:54:13']
+['Montréal ', 'élection OR campagne', 18, 'Le Journal de Montréal', 'Une organisatrice de la dernière campagne de Justin Trudeau se lance en politique municipale', '2021-06-23', 4, 'https://www.journaldemontreal.com/2021/06/23/une-organisatrice-de-la-derniere-campagne-de-justin-trudeau-se-lance-en-politique-municipale', '2021-06-27 13:54:13']
+['Montréal ', 'élection OR campagne', 19, 'Le Monde', "Elections régionales 2021 : après l'abstention massive, les candidats tentent de remobiliser pour le second tour", '2021-06-26', 1, 'https://www.lemonde.fr/politique/article/2021/06/26/regionales-les-etats-majors-de-campagne-appellent-a-la-remobilisation-pour-le-second-tour_6085776_823448.html', '2021-06-27 13:54:14']
+['Montréal ', 'élection OR campagne', 20, 'Franceinfo', 'Élections régionales : une campagne pour inciter les jeunes à aller voter', '2021-06-24', 3, 'https://www.francetvinfo.fr/replay-radio/le-brief-politique/elections-regionales-une-campagne-pour-inciter-les-jeunes-a-aller-voter_4658017.html', '2021-06-27 13:54:14']
+['Montréal ', 'élection OR campagne', 21, 'Le Nouvelliste - Groupe Capitales Médias', 'Une campagne pour apprendre à vivre en harmonie avec ses voisins', '2021-06-25', 2, 'https://www.lenouvelliste.ca/actualites/trois-rivieres/une-campagne-pour-apprendre-a-vivre-en-harmonie-avec-ses-voisins-4607e3987698cbca208b4f0912881fba', '2021-06-27 13:54:14']
+['Montréal ', 'élection OR campagne', 22, 'ICI.Radio-Canada.ca', 'Les Manitobains ravis de pouvoir rendre visite à leurs proches en foyers de soins | Coronavirus', '2021-06-26', 1, 'https://ici.radio-canada.ca/nouvelle/1804765/personnes-agees-visites-foyers-soins-covid19', '2021-06-27 13:54:14']
+['Montréal ', 'élection OR campagne', 23, 'Le Journal de Montréal', 'COVID-19: accélération de la campagne de vaccination en Estrie', '2021-06-25', 2, 'https://www.journaldemontreal.com/2021/06/25/covid-19-acceleration-de-la-campagne-de-vaccination-en-estrie-1', '2021-06-27 13:54:14']
+['Montréal ', 'élection OR campagne', 24, 'Ouest-France', 'Élection présidentielle au Pérou : intrigues, contestations et manifestations', '2021-06-27', 0, 'https://www.ouest-france.fr/monde/perou/election-presidentielle-au-perou-intrigues-contestations-et-manifestations-398b9494-d73e-11eb-9b21-079b84408f9a', '2021-06-27 13:54:15']
+['Montréal ', 'élection OR campagne', 25, 'CNW Telbec', "Chorus Aviation Inc. annonce l'élection de ses administrateurs English", '2021-06-21', 6, 'https://www.newswire.ca/fr/news-releases/chorus-aviation-inc-annonce-l-election-de-ses-administrateurs-881368562.html', '2021-06-27 13:54:15']
+député
+2021-06-27 13:54:43
+['Montréal ', 'député', 1, 'Le Journal de Montréal', "Égypte: un ancien député arrêté pour trafic d'antiquités", '2021-06-25', 2, 'https://www.journaldemontreal.com/2021/06/25/egypte-un-ancien-depute-arrete-pour-trafic-dantiquites', '2021-06-27 13:54:52']
+['Montréal ', 'député', 2, 'Africanews Français', 'Égypte : un ex-député aux mains de la justice pour trafic d’antiquités', '2021-06-25', 2, 'https://fr.africanews.com/2021/06/25/egypte-un-ex-depute-aux-mains-de-la-justice-pour-trafic-d-antiquites/', '2021-06-27 13:54:52']
+['Montréal ', 'député', 3, 'BFMTV', "Egypte: un ancien député arrêté pour trafic d'antiquitiés", '2021-06-25', 2, 'https://www.bfmtv.com/international/afrique/egypte/egypte-un-ancien-depute-arrete-pour-trafic-d-antiquities_AD-202106250251.html', '2021-06-27 13:54:53']
+['Montréal ', 'député', 4, 'La Nouvelle Tribune', 'Trafic d’antiquités égyptiennes : un ancien député arrêté', '2021-06-25', 2, 'https://lanouvelletribune.info/2021/06/trafic-dantiquites-egyptiennes-un-ancien-depute-arrete/', '2021-06-27 13:54:53']
+['Montréal ', 'député', 5, 'Le Journal de Montréal', 'Député nu, prise 2: une conservatrice réclame une punition contre William Amos', '2021-05-28', 30, 'https://www.journaldemontreal.com/2021/05/28/william-amos-je-ne-sais-pas-cest-quoi-le-probleme-1', '2021-06-27 13:54:53']
+['Montréal ', 'député', 6, 'Le Soleil - Groupe Capitales Médias', "Le député libéral William Amos encore dans l'embarras après avoir été vu uriner", '2021-05-28', 30, 'https://www.lesoleil.com/actualite/le-depute-liberal-william-amos-encore-dans-lembarras-apres-avoir-ete-vu-uriner-c5df02dc02073f378963658c0ac8649e', '2021-06-27 13:54:53']
+['Montréal ', 'député', 7, 'La Presse', "Député libéral dans l'embarras | Une élue conservatrice réclame des sanctions contre William Amos", '2021-05-28', 30, 'https://www.lapresse.ca/actualites/politique/2021-05-28/depute-liberal-dans-l-embarras/une-elue-conservatrice-reclame-des-sanctions-contre-william-amos.php', '2021-06-27 13:54:54']
+['Montréal ', 'député', 8, 'Radio-Canada.ca', 'Un autre incident de nudité « embarrassant » pour William Amos et pour le Parti libéral', '2021-05-28', 30, 'https://ici.radio-canada.ca/nouvelle/1796982/william-amos-justin-trudeau-incident-depute-liberal', '2021-06-27 13:54:54']
+['Montréal ', 'député', 9, 'Ouest-France', 'Canada. Après avoir été vu nu, un député surpris à la caméra en train d’uriner dans une tasse', '2021-05-29', 29, 'https://www.ouest-france.fr/monde/canada/apres-avoir-ete-vu-nu-un-depute-canadien-surpris-a-la-camera-en-train-d-uriner-dans-une-tasse-7278464', '2021-06-27 13:54:54']
+['Montréal ', 'député', 10, 'Le Journal de Québec', '«Lien de confiance brisé»: le PQ perd un autre député', '2021-06-04', 23, 'https://www.journaldequebec.com/2021/06/04/lien-de-confiance-brise-le-depute-sylvain-roy-quitte-le-pq-et-siegera-comme-independant', '2021-06-27 13:54:54']
+['Montréal ', 'député', 11, 'La Releve', 'Bilan de session parlementaire de Xavier Barsalou-Duval', '2021-06-26', 1, 'https://www.lareleve.qc.ca/2021/06/26/bilan-de-session-parlementaire-de-xavier-barsalou-duval/', '2021-06-27 13:54:55']
+['Montréal ', 'député', 12, 'ICI.Radio-Canada.ca', "Bleuetières sur l'ancien champ de tir : le député Denis Landry s'interroge", '2021-06-25', 2, 'https://ici.radio-canada.ca/nouvelle/1804305/denis-landry-questionnement-ancien-champ-de-tir-tracadie', '2021-06-27 13:54:55']
+['Montréal ', 'député', 13, 'Radio-Canada.ca', "Entrée du Parti conservateur à l'Assemblée nationale avec la députée Claire Samson", '2021-06-18', 9, 'https://ici.radio-canada.ca/nouvelle/1802590/claire-samson-deputee-conservateur-caq-transfuge', '2021-06-27 13:54:55']
+['Montréal ', 'député', 14, 'ICI.Radio-Canada.ca', "L'ancien député fédéral T. J. Harvey candidat à la direction du Parti libéral du N.-B.", '2021-06-22', 5, 'https://ici.radio-canada.ca/nouvelle/1802991/harvey-candidat-direction-parti-liberal-nouveau-brunswick', '2021-06-27 13:54:55']
+['Montréal ', 'député', 15, 'Le Journal de Montréal', "L'historien Frédéric Bastien dénonce les propos du député libéral Anthony Housefather", '2021-06-17', 10, 'https://www.journaldemontreal.com/2021/06/17/lhistorien-frederic-bastien-denonce-les-propos-du-depute-liberal-anthony-housefather', '2021-06-27 13:54:56']
+['Montréal ', 'député', 16, 'La Presse', "Arrestation en 2017 | L'UPAC présente ses excuses au député Guy Ouellette", '2021-06-10', 17, 'https://www.lapresse.ca/actualites/2021-06-10/arrestation-en-2017/l-upac-presente-ses-excuses-au-depute-guy-ouellette.php', '2021-06-27 13:54:56']
+['Montréal ', 'député', 17, 'Le Journal de Montréal', 'Congédiement du personnel politique: deux syndicats retirent leur confiance à un député bloquiste', '2021-05-28', 30, 'https://www.journaldemontreal.com/2021/05/28/congediement-du-personnel-politique-deux-syndicats-retirent-leur-confiance-a-un-depute-bloquiste', '2021-06-27 13:54:56']
+['Montréal ', 'député', 18, 'La Presse', 'Les élus fédéraux impatients de retourner aux Communes', '2021-06-27', 0, 'https://www.lapresse.ca/actualites/politique/2021-06-27/les-elus-federaux-impatients-de-retourner-aux-communes.php', '2021-06-27 13:54:56']
+['Montréal ', 'député', 19, 'La Nouvelle Union', 'Produits laitiers : le député Rayes déplore la position du gouvernement libéral', '2021-06-17', 10, 'https://www.lanouvelle.net/2021/06/17/produits-laitiers-le-depute-rayes-deplore-la-position-du-gouvernement-liberal/', '2021-06-27 13:54:56']
+['Montréal ', 'député', 20, 'La Nouvelle Union', "Au tour du député Lefebvre de s'adresser aux finissants", '2021-06-09', 18, 'https://www.lanouvelle.net/2021/06/09/au-tour-du-depute-lefebvre-de-sadresser-aux-finissants/', '2021-06-27 13:54:56']
+['Montréal ', 'député', 21, "L'Écho de Maskinongé", 'Le député Simon Allaire heureux de retrouver le terrain', '2021-06-24', 3, 'https://www.lechodemaskinonge.com/actualites/le-depute-simon-allaire-heureux-de-retrouver-le-terrain/', '2021-06-27 13:54:57']
+['Montréal ', 'député', 22, 'La Nouvelle Union', 'Le député Schneeberger vante le bilan de son gouvernement', '2021-06-18', 9, 'https://www.lanouvelle.net/2021/06/18/le-depute-schneeberger-vante-le-bilan-de-son-gouvernement/', '2021-06-27 13:54:57']
+['Montréal ', 'député', 23, 'L’actualité', 'Au moins un député libéral fédéral opposé à la motion prenant acte du PL96', '2021-06-15', 12, 'https://lactualite.com/actualites/le-bloc-veut-quottawa-reconnaisse-le-droit-de-quebec-de-modifier-la-constitution/', '2021-06-27 13:54:57']
+['Montréal ', 'député', 24, 'La Presse', 'Que faire des transfuges politiques ? | La Presse', '2021-06-26', 1, 'https://www.lapresse.ca/debats/courrier-des-lecteurs/2021-06-26/que-faire-des-transfuges-politiques.php', '2021-06-27 13:54:57']
+['Montréal ', 'député', 25, 'Radio-Canada.ca', 'Fitzgibbon quitte ses fonctions de ministre, mais reste député', '2021-06-02', 25, 'https://ici.radio-canada.ca/nouvelle/1798094/rapport-commissaire-ethique-suspension-pierre-fitzgibbon-assemblee-nationale', '2021-06-27 13:54:58']
+arme à feu
+2021-06-27 13:54:59
+['Montréal ', 'arme à feu', 1, 'Le Journal de Montréal', "Le Texas autorise le port d'arme à feu en public et sans permis", '2021-06-17', 10, 'https://www.journaldemontreal.com/2021/06/17/le-texas-autorise-le-port-darme-a-feu-en-public-et-sans-permis', '2021-06-27 13:55:06']
+['Montréal ', 'arme à feu', 2, '98,5 fm', "Port d'arme sans permis au Texas | «Il n'y a pas que le Texas qui est un peu cowboy avec ses règles sur les armes à feu»", '2021-06-17', 10, 'https://www.985fm.ca/nouvelles/international/405266/port-d-arme-sans-permis-au-texas-il-n-y-a-pas-que-le-texas-qui-est-un-peu-cow-boy-avec-ses-regles-sur-les-armes-a-feu', '2021-06-27 13:55:06']
+['Montréal ', 'arme à feu', 3, 'Le Figaro', "Le Texas autorise le port d'arme à feu en public sans permis", '2021-06-17', 10, 'https://www.lefigaro.fr/flash-actu/le-texas-autorise-le-port-d-arme-a-feu-en-public-sans-permis-20210617', '2021-06-27 13:55:07']
+['Montréal ', 'arme à feu', 4, 'Le Parisien', 'Etats-Unis : le Texas autorise le port d’arme à feu en public et sans permis', '2021-06-17', 10, 'https://www.leparisien.fr/societe/etats-unis-le-texas-autorise-le-port-darme-a-feu-en-public-et-sans-permis-17-06-2021-XHIOJPMHPBFDFG4MPTKNONGX4Y.php', '2021-06-27 13:55:07']
+['Montréal ', 'arme à feu', 5, 'LaDepeche.fr', "Aux États-Unis, le Texas autorise le port d'arme à feu en public et sans permis", '2021-06-17', 10, 'https://www.ladepeche.fr/2021/06/17/aux-etats-unis-le-texas-autorise-le-port-darme-a-feu-en-public-et-sans-permis-9612473.php', '2021-06-27 13:55:07']
+['Montréal ', 'arme à feu', 6, 'La Presse', "Montréal | Un adolescent arrêté pour possession d'arme à feu", '2021-06-17', 10, 'https://www.lapresse.ca/actualites/justice-et-faits-divers/2021-06-17/montreal/un-adolescent-arrete-pour-possession-d-arme-a-feu.php', '2021-06-27 13:55:07']
+['Montréal ', 'arme à feu', 7, 'Le Journal de Montréal', 'Photographié avec Coderre, arrêté pour avoir déchargé une arme à feu', '2021-06-18', 9, 'https://www.journaldemontreal.com/2021/06/18/photographie-avec-coderre-arrete-pour-avoir-decharge-une-arme-a-feu', '2021-06-27 13:55:07']
+['Montréal ', 'arme à feu', 8, 'La Presse', 'Montréal | 150 évènements impliquant des armes à feu en un an', '2021-06-16', 11, 'https://www.lapresse.ca/actualites/justice-et-faits-divers/2021-06-16/montreal/150-evenements-impliquant-des-armes-a-feu-en-un-an.php', '2021-06-27 13:55:07']
+['Montréal ', 'arme à feu', 9, 'La Presse', "Gatineau | Deux Ontariens munis d'armes à feu arrêtés", '2021-06-25', 2, 'https://www.lapresse.ca/actualites/justice-et-faits-divers/2021-06-25/gatineau/deux-ontariens-munis-d-armes-a-feu-arretes.php', '2021-06-27 13:55:08']
+['Montréal ', 'arme à feu', 10, 'Journal Métro', "La criminalité en baisse, mais l'usage d'armes à feu en hausse", '2021-06-16', 11, 'https://journalmetro.com/actualites/montreal/2656643/bilan-spvm-criminalite-en-baisse-lusage-darmes-a-feu-en-hausse/', '2021-06-27 13:55:08']
+['Montréal ', 'arme à feu', 11, 'Le Droit - Groupe Capitales Médias', 'Hawkesbury: cinq Québécois arrêtés à la frontière avec des armes à feu', '2021-06-11', 16, 'https://www.ledroit.com/actualites/est-ontarien/hawkesbury-cinq-quebecois-arretes-a-la-frontiere-avec-des-armes-a-feu-278af62877d92cc7f6ecf43f0ccbf6ce', '2021-06-27 13:55:08']
+['Montréal ', 'arme à feu', 12, 'Le Journal de Québec', 'Femme blessée par balle à Québec: un courtier aurait tiré sur son ex', '2021-06-19', 8, 'https://www.journaldequebec.com/2021/06/19/coups-de-feu-a-quebec-une-femme-blessee-par-balle', '2021-06-27 13:55:08']
+['Montréal ', 'arme à feu', 13, 'ICI.Radio-Canada.ca', "Un homme de 18 ans arrêté à Val-d'Or en lien avec le vol d'armes à feu", '2021-06-02', 25, 'https://ici.radio-canada.ca/nouvelle/1798110/vol-armes-garage-suspect-vallee-de-l-or', '2021-06-27 13:55:08']
+['Montréal ', 'arme à feu', 14, 'ICI.Radio-Canada.ca', 'Intervention policière de plusieurs heures pour un homme en crise à Barraute', '2021-06-27', 0, 'https://ici.radio-canada.ca/nouvelle/1804808/surete-quebec-homme-fuite-barraute', '2021-06-27 13:55:09']
+['Montréal ', 'arme à feu', 15, 'L’actualité', 'Un homme armé et en crise est arrêté par les policiers au bout de cinq heures', '2021-06-27', 0, 'https://lactualite.com/actualites/un-homme-arme-et-en-crise-est-arrete-par-les-policiers-au-bout-de-cinq-heures/', '2021-06-27 13:55:09']
+['Montréal ', 'arme à feu', 16, 'France Bleu', 'Un trentenaire gravement blessé par arme à feu et arme blanche à Toulouse', '2021-06-25', 2, 'https://www.francebleu.fr/infos/faits-divers-justice/un-trentenaire-gravement-blesse-par-arme-a-feu-et-arme-blanche-a-toulouse-1624627615', '2021-06-27 13:55:09']
+['Montréal ', 'arme à feu', 17, 'Le Journal de Montréal', 'Un véritable arsenal saisi à Laval', '2021-06-16', 11, 'https://www.journaldemontreal.com/2021/06/16/un-veritable-arsenal-saisi-a-laval', '2021-06-27 13:55:09']
+['Montréal ', 'arme à feu', 18, 'La Presse', "Californie | Un juge annule l'interdiction des armes d'assaut", '2021-06-05', 22, 'https://www.lapresse.ca/international/etats-unis/2021-06-05/californie/un-juge-annule-l-interdiction-des-armes-d-assaut.php', '2021-06-27 13:55:09']
+['Montréal ', 'arme à feu', 19, 'Le Journal de Québec', 'Coup de feu dans une vitrine de la rue Saint-Jean', '2021-06-23', 4, 'https://www.journaldequebec.com/2021/06/23/coup-de-feu-dans-une-vitrine', '2021-06-27 13:55:09']
+['Montréal ', 'arme à feu', 20, 'Le Droit - Groupe Capitales Médias', "Gatineau: armes à feu saisies lors d'un contrôle routier", '2021-06-25', 2, 'https://www.ledroit.com/actualites/justice-et-faits-divers/gatineau-armes-a-feu-saisies-lors-dun-controle-routier-40aaf54d2ad17363cd4236ded21dab2f', '2021-06-27 13:55:10']
+['Montréal ', 'arme à feu', 21, 'La Presse', "Possession d'armes à feu illégales | Deux individus liés à un nouveau groupe de motards « inclusif » arrêtés", '2021-06-07', 20, 'https://www.lapresse.ca/actualites/justice-et-faits-divers/2021-06-07/possession-d-armes-a-feu-illegales/deux-individus-lies-a-un-nouveau-groupe-de-motards-inclusif-arretes.php', '2021-06-27 13:55:10']
+['Montréal ', 'arme à feu', 22, 'CNW Telbec', 'Le gouvernement du Canada met en œuvre son plan visant à bâtir des communautés plus sûres et à réduire la violence liée aux armes à feu', '2021-06-22', 5, 'https://www.newswire.ca/fr/news-releases/le-gouvernement-du-canada-met-en-oeuvre-son-plan-visant-a-batir-des-communautes-plus-sures-et-a-reduire-la-violence-liee-aux-armes-a-feu-879917263.html', '2021-06-27 13:55:10']
+['Montréal ', 'arme à feu', 23, 'Le Journal de Montréal', "Abitibi-Témiscamingue: un homme de 38 ans disjoncte et s'enfuit avec une arme volée", '2021-06-27', 0, 'https://www.journaldemontreal.com/2021/06/27/abitibi-temiscamingue-un-homme-de-38-ans-disjoncte-et-se-sauve-avec-une-arme-volee', '2021-06-27 13:55:10']
+['Montréal ', 'arme à feu', 24, 'Ouest-France éditions locales', 'À Marseille, un TGV visé par des tirs d’arme à feu lors de son arrivée en gare', '2021-06-24', 3, 'https://www.ouest-france.fr/provence-alpes-cote-dazur/marseille-13000/un-tgv-vise-par-un-tir-d-arme-a-feu-en-gare-de-marseille-8807f25a-d4d4-11eb-99d2-879e2b250f40', '2021-06-27 13:55:10']
+['Montréal ', 'arme à feu', 25, 'Radio-Canada.ca', "Nouvelle escouade du SPVM contre le trafic d'armes : loin des effectifs promis", '2021-06-07', 20, 'https://ici.radio-canada.ca/nouvelle/1798984/police-montreal-armes-a-feu-unite-elta', '2021-06-27 13:55:10']
+santé publique
+2021-06-27 13:55:11
+['Montréal ', 'santé publique', 1, 'La Presse', 'Santé publique du Canada | Les avis assouplis pour les gens entièrement vaccinés', '2021-06-25', 2, 'https://www.lapresse.ca/covid-19/2021-06-25/sante-publique-du-canada/les-avis-assouplis-pour-les-gens-entierement-vaccines.php', '2021-06-27 13:55:18']
+['Montréal ', 'santé publique', 2, 'Le Devoir', 'Pour la santé publique fédérale, le variant Delta est le «dernier obstacle» à franchir', '2021-06-25', 2, 'https://www.ledevoir.com/societe/sante/613833/pour-la-sante-publique-federale-le-variant-delta-est-le-dernier-obstacle-a-franchir', '2021-06-27 13:55:19']
+['Montréal ', 'santé publique', 3, 'Le Journal de Québec', 'Les restrictions sanitaires de retour dans plusieurs pays', '2021-06-27', 0, 'https://www.journaldequebec.com/2021/06/26/covid-19-la-ville-de-sydney-entierement-confinee', '2021-06-27 13:55:19']
+['Montréal ', 'santé publique', 4, 'Acadie Nouvelle', 'COVID-19: le variant Delta est le "dernier obstacle", selon la santé publique fédérale', '2021-06-25', 2, 'https://www.acadienouvelle.com/etc/sante-mieux-etre/2021/06/25/le-variant-delta-est-le-dernier-obstacle-selon-la-sante-publique-federale/', '2021-06-27 13:55:19']
+['Montréal ', 'santé publique', 5, 'Bien Public', "En direct | Covid-19 : ce qu'il faut retenir de la journée de vendredi", '2021-06-25', 2, 'https://www.bienpublic.com/sante/2021/06/25/covid-19-le-variant-delta-menace-la-france-au-moment-ou-la-vaccination-flechit', '2021-06-27 13:55:19']
+['Montréal ', 'santé publique', 6, 'Radio-Canada.ca', 'Centre Bell : la santé publique déplore les manquements aux mesures sanitaires | Coronavirus', '2021-06-25', 2, 'https://ici.radio-canada.ca/nouvelle/1804437/regles-sanitaires-rassemblements-centre-bell-canadiens-montreal-prudence', '2021-06-27 13:55:20']
+['Montréal ', 'santé publique', 7, 'ICI.Radio-Canada.ca', 'La santé publique de Montréal exhorte les jeunes à se faire vacciner | Coronavirus', '2021-06-22', 5, 'https://ici.radio-canada.ca/nouvelle/1803797/montreal-sante-publique-zone-verte-vaccination-jeunes', '2021-06-27 13:55:20']
+['Montréal ', 'santé publique', 8, 'Le Soleil - Groupe Capitales Médias', 'La santé publique fédérale formule des recommandations plus souples pour les vaccinés', '2021-06-25', 2, 'https://www.lesoleil.com/actualite/covid-19/la-sante-publique-federale-formule-des-recommandations-plus-souples-pour-les-vaccines-534df91aacaa9cd531724d77fec6a1c4', '2021-06-27 13:55:20']
+['Montréal ', 'santé publique', 9, 'Le Journal de Montréal', "L'Agence de la santé publique du Canada dans l'eau chaude", '2021-06-21', 6, 'https://www.journaldemontreal.com/2021/06/21/lagence-de-la-sante-publique-du-canada-dans-leau-chaude', '2021-06-27 13:55:20']
+['Montréal ', 'santé publique', 10, 'Fm1033.ca', 'Vaccin Santé publique ajoute des plages horaires de vaccination à Brossard', '2021-06-25', 2, 'https://www.fm1033.ca/sante-publique-ajoute-des-plages-horaires-de-vaccination-a-brossard/', '2021-06-27 13:55:20']
+['Montréal ', 'santé publique', 11, 'ICI.Radio-Canada.ca', 'Des directeurs de santé appuient un modèle de décriminalisation de la possession de drogue', '2021-06-26', 1, 'https://ici.radio-canada.ca/nouvelle/1804637/drogue-decriminalisation-quebec-sante-publique', '2021-06-27 13:55:20']
+['Montréal ', 'santé publique', 12, 'Le Devoir', 'La Santé publique signale 194 nouveaux cas de COVID-19', '2021-06-07', 20, 'https://www.ledevoir.com/societe/sante/608499/la-sante-publique-signale-194-nouveaux-cas-de-covid-19', '2021-06-27 13:55:20']
+['Montréal ', 'santé publique', 13, 'Radio-Canada.ca', "Santé publique L'INSPQ craint le retour des excès", '2021-06-26', 1, 'https://ici.radio-canada.ca/nouvelle/1804671/consommation-boisson-exces-abus-inspq', '2021-06-27 13:55:21']
+['Montréal ', 'santé publique', 14, 'La Presse', 'La Santé publique du Canada assouplit ses avis pour les gens entièrement vaccinés', '2021-06-25', 2, 'https://www.lapresse.ca/covid-19/2021-06-25/la-sante-publique-du-canada-assouplit-ses-avis-pour-les-gens-entierement-vaccines.php', '2021-06-27 13:55:21']
+['Montréal ', 'santé publique', 15, 'LeLézard.com', "Déclaration de l'administratrice en chef de la santé publique du Canada, le 26 juin 2021", '2021-06-26', 1, 'https://www.lelezard.com/communique-19876106.html', '2021-06-27 13:55:21']
+['Montréal ', 'santé publique', 16, 'Le Courrier Sud', "La Direction de santé publique offrira des webinaires aux promoteurs d'événements", '2021-06-22', 5, 'https://www.lecourriersud.com/la-direction-de-sante-publique-offrira-des-webinaires-aux-promoteurs-devenements/', '2021-06-27 13:55:21']
+['Montréal ', 'santé publique', 17, 'La Presse', "Partout, le variant Delta sème l'inquiétude", '2021-06-27', 0, 'https://www.lapresse.ca/covid-19/2021-06-27/partout-le-variant-delta-seme-l-inquietude.php', '2021-06-27 13:55:22']
+['Montréal ', 'santé publique', 18, '98,5 fm', "Dr Gaston DeSerres, médecin-épidémiologiste de l'Institut national de santé publique du Québec", '2021-06-25', 2, 'https://www.985fm.ca/audio/406727/dr-gaston-deserres-medecin-epidemiologiste-de-linstitut-national-de-sante-publique-du-quebec', '2021-06-27 13:55:22']
+['Montréal ', 'santé publique', 19, 'ICI.Radio-Canada.ca', "Des restaurateurs s'interrogent sur les nouvelles règles de santé publique | La COVID-19 en Atlantique", '2021-06-18', 9, 'https://ici.radio-canada.ca/nouvelle/1802591/restaurants-capacite-distantiation-eloignement-physique-nouveau-brunswick', '2021-06-27 13:55:22']
+['Montréal ', 'santé publique', 20, 'Le Devoir', 'Santé publique et décès liés aux drogues', '2021-06-15', 12, 'https://www.ledevoir.com/opinion/idees/610836/coronavirus-sante-publique-et-deces-lies-aux-drogues', '2021-06-27 13:55:22']
+['Montréal ', 'santé publique', 21, 'La Presse', 'Bilan de la COVID-19 | Deux doses pour éviter une quatrième vague, selon la Santé publique', '2021-06-15', 12, 'https://www.lapresse.ca/covid-19/2021-06-15/bilan-de-la-covid-19/deux-doses-pour-eviter-une-quatrieme-vague-selon-la-sante-publique.php', '2021-06-27 13:55:22']
+['Montréal ', 'santé publique', 22, 'La Presse', 'Changements climatiques | Une facture salée pour la santé publique', '2021-06-23', 4, 'https://www.lapresse.ca/debats/opinions/2021-06-23/changements-climatiques/une-facture-salee-pour-la-sante-publique.php', '2021-06-27 13:55:22']
+['Montréal ', 'santé publique', 23, 'La Presse', "Bals de fin d'études | La Santé publique cherche un compromis qui exclut les soirées dansantes", '2021-06-03', 24, 'https://www.lapresse.ca/covid-19/2021-06-03/bals-de-fin-d-etudes/la-sante-publique-cherche-un-compromis-qui-exclut-les-soirees-dansantes.php', '2021-06-27 13:55:23']
+['Montréal ', 'santé publique', 24, 'Ontario Newsroom', "L'Ontario passe à la deuxième phase du Plan d'action pour le déconfinement le 30 juin 2021 | Salle de presse de l'Ontario", '2021-06-24', 3, 'https://news.ontario.ca/fr/release/1000399/lontario-passe-a-la-deuxieme-phase-du-plan-daction-pour-le-deconfinement-le-30-juin-2021', '2021-06-27 13:55:23']
+['Montréal ', 'santé publique', 25, 'Radio-Canada.ca', "Québec songe à augmenter considérablement la limite de nickel permise dans l'air", '2021-06-26', 1, 'https://ici.radio-canada.ca/nouvelle/1804624/pollution-nickel-projet-gouvernement-legault-sol-zanetti', '2021-06-27 13:55:23']
+covid OR COVID
+2021-06-27 13:55:24
+['Montréal ', 'covid OR COVID', 1, 'Le Journal de Montréal', "CH: Joel Armia à l'écart en raison de la COVID-19", '2021-06-27', 0, 'https://www.journaldemontreal.com/2021/06/27/covid-19--joel-armia-a-lecart', '2021-06-27 13:55:32']
+['Montréal ', 'covid OR COVID', 2, 'TVA Sports', 'Sports Joel Armia se soumet au protocole COVID-19', '2021-06-27', 0, 'https://www.tvasports.ca/2021/06/27/joel-armia-se-soumet-au-protocole-de-la-covid-19', '2021-06-27 13:55:32']
+['Montréal ', 'covid OR COVID', 3, 'DansLesCoulisses', "Protocole de la COVID-19 : Joel Armia absent de l'entraînement", '2021-06-27', 0, 'https://www.danslescoulisses.com/fr/protocole-de-la-covid-19-joel-armia-absent-de-lentrainement/', '2021-06-27 13:55:32']
+['Montréal ', 'covid OR COVID', 4, "La Voix de l'est - Groupe Capitales Médias", "Joel Armia suit le protocole de la COVID-19, ne voyagera pas avec l'équipe", '2021-06-27', 0, 'https://www.lavoixdelest.ca/sports/joel-armia-suit-le-protocole-de-la-covid-19-ne-voyagera-pas-avec-lequipe-5dd80f1a627418b6c5e8189d0adb2bb2', '2021-06-27 13:55:32']
+['Montréal ', 'covid OR COVID', 5, 'La Presse', 'Point de presse de Marc Bergevin | Notre couverture en direct', '2021-06-27', 0, 'https://www.lapresse.ca/sports/hockey/2021-06-27/point-de-presse-de-marc-bergevin/notre-couverture-en-direct.php', '2021-06-27 13:55:32']
+['Montréal ', 'covid OR COVID', 6, 'La Presse', 'COVID-19 | Moscou enregistre un record de décès quotidiens', '2021-06-27', 0, 'https://www.lapresse.ca/international/europe/2021-06-27/covid-19/moscou-enregistre-un-record-de-deces-quotidiens.php', '2021-06-27 13:55:33']
+['Montréal ', 'covid OR COVID', 7, 'Radio-Canada.ca', 'Une deuxième dose est-elle nécessaire pour ceux qui ont eu la COVID-19? | Coronavirus', '2021-06-26', 1, 'https://ici.radio-canada.ca/nouvelle/1804352/doses-vaccin-covid-coronavirus-infection-quebec', '2021-06-27 13:55:33']
+['Montréal ', 'covid OR COVID', 8, 'ICI.Radio-Canada.ca', 'COVID-19 : nouveaux allègements au Québec, mais la prudence est de mise | Coronavirus', '2021-06-25', 2, 'https://ici.radio-canada.ca/nouvelle/1804408/benoit-barbeau-uqam-mesures-sanitaires-variants-assouplissement-quebec', '2021-06-27 13:55:33']
+['Montréal ', 'covid OR COVID', 9, 'Le Journal de Montréal', 'Importation privée de vaccins contre la COVID, les pharmaciens haïtiens craignent des contrefaçons', '2021-06-26', 1, 'https://www.journaldemontreal.com/2021/06/26/importation-privee-de-vaccins-contre-la-covid-les-pharmaciens-haitiens-craignent-des-contrefacons-1', '2021-06-27 13:55:33']
+['Montréal ', 'covid OR COVID', 10, 'TVA Nouvelles', 'La population mondiale toujours vulnérable à la COVID-19', '2021-06-26', 1, 'https://www.tvanouvelles.ca/2021/06/25/la-population-mondiale-toujours-vulnerable-a-la-covid-19-1', '2021-06-27 13:55:33']
+['Montréal ', 'covid OR COVID', 11, 'Gouv. Manitoba', 'Province du Manitoba | Communiqués | Bulletin sur la COVID-19 numéro 474', '2021-06-27', 0, 'https://www.gov.mb.ca/news/index.fr.html?archive&item=51537', '2021-06-27 13:55:33']
+['Montréal ', 'covid OR COVID', 12, 'Le Droit - Groupe Capitales Médias', 'Covid-19 : Le Premier ministre luxembourgeois testé positif | Actualités', '2021-06-27', 0, 'https://www.ledroit.com/actualites/covid-19--le-premier-ministre-luxembourgeois-teste-positif-13f7529767347f1b2284e3e0f71d5bcd', '2021-06-27 13:55:34']
+['Montréal ', 'covid OR COVID', 13, 'TVA Nouvelles', 'COVID-19: augmentation des cas en Ontario', '2021-06-26', 1, 'https://www.tvanouvelles.ca/2021/06/26/covid-19-augmentation-des-cas-en-ontario', '2021-06-27 13:55:34']
+['Montréal ', 'covid OR COVID', 14, 'Le Journal de Montréal', 'La Thaïlande met en place des restrictions pour lutter contre la COVID-19', '2021-06-27', 0, 'https://www.journaldemontreal.com/2021/06/27/la-thailande-met-en-place-des-restrictions-pour-lutter-contre-la-covid-19', '2021-06-27 13:55:34']
+['Montréal ', 'covid OR COVID', 15, 'Le Journal de Québec', 'COVID-19: «Le vaccin est sûr, efficace et disponible»', '2021-06-27', 0, 'https://www.journaldequebec.com/2021/06/27/le-vaccin-est-sur-efficace-et-disponible', '2021-06-27 13:55:34']
+['Montréal ', 'covid OR COVID', 16, 'TVA Nouvelles', 'Un outil pour calculer le risque COVID de vos activités', '2021-06-26', 1, 'https://www.tvanouvelles.ca/2021/06/26/un-outil-pour-calculer-le-risque-covid-de-vos-activites', '2021-06-27 13:55:34']
+['Montréal ', 'covid OR COVID', 17, 'Le Journal de Montréal', 'COVID-19: le ministre britannique de la Santé démissionne pour non-respect des règles sanitaires', '2021-06-26', 1, 'https://www.journaldemontreal.com/2021/06/26/covid-19-le-ministre-britannique-de-la-sante-demissionne-pour-non-respect-des-regles-sanitaires-1', '2021-06-27 13:55:34']
+['Montréal ', 'covid OR COVID', 18, 'Le Nouvelliste - Groupe Capitales Médias', 'Survivant de la COVID: «Je suis un cas unique mondialement»', '2021-06-26', 1, 'https://www.lenouvelliste.ca/ma-region/survivant-de-la-covid-je-suis-un-cas-unique-mondialement-30d80d566339e0bada5087d70345b2b3', '2021-06-27 13:55:35']
+['Montréal ', 'covid OR COVID', 19, 'La Presse', 'Euro | Le Croate Ivan Perisic déclaré positif à la COVID-19', '2021-06-27', 0, 'https://www.lapresse.ca/sports/soccer/2021-06-27/euro/le-croate-ivan-perisic-declare-positif-a-la-covid-19.php', '2021-06-27 13:55:35']
+['Montréal ', 'covid OR COVID', 20, 'Le Journal de Montréal', 'COVID-19: les rassemblements monstres de partisans divisent les experts', '2021-06-26', 1, 'https://www.journaldemontreal.com/2021/06/25/pas-sur-si-cest-si-risque-dehors', '2021-06-27 13:55:35']
+['Montréal ', 'covid OR COVID', 21, 'Le Journal de Québec', 'À peine deux cas de COVID-19 à Québec', '2021-06-20', 7, 'https://www.journaldequebec.com/2021/06/20/a-peine-deux-cas-de-covid-19-a-quebec-1', '2021-06-27 13:55:35']
+['Montréal ', 'covid OR COVID', 22, 'L’actualité', "Pandémie de COVID-19: tout le Québec passe au palier d'alerte vert lundi", '2021-06-27', 0, 'https://lactualite.com/actualites/pandemie-de-covid-19-tout-le-quebec-passe-au-palier-dalerte-vert-lundi/', '2021-06-27 13:55:36']
+['Montréal ', 'covid OR COVID', 23, 'Radio-Canada.ca', 'Les symptômes les plus fréquents de la COVID-19 sont susceptibles de changer | Coronavirus', '2021-06-19', 8, 'https://ici.radio-canada.ca/nouvelle/1802925/coronavirus-etude-angleterre-maux-tete-gorge-nez', '2021-06-27 13:55:36']
+['Montréal ', 'covid OR COVID', 24, 'Le Journal de Québec', 'Un portrait plus juste des morts liées à la COVID au Québec', '2021-06-17', 10, 'https://www.journaldequebec.com/2021/06/17/les-morts-covid-ont-ils-ete-surevalues-au-quebec', '2021-06-27 13:55:36']
+['Montréal ', 'covid OR COVID', 25, 'Radio-Canada.ca', "COVID-19 : le Yukon montre-t-il au reste du Canada ce qui l'attend? | Coronavirus", '2021-06-23', 4, 'https://ici.radio-canada.ca/nouvelle/1803848/yukon-covid-augmentation-cas-exemple-canada', '2021-06-27 13:55:36']
+construction
+2021-06-27 13:55:37
+['Montréal ', 'construction', 1, 'Le Journal de Montréal', 'Le fléau des matériaux de construction illégaux', '2021-06-26', 1, 'https://www.journaldemontreal.com/2021/06/26/le-fleau-des-materiaux-de-construction-illegaux', '2021-06-27 13:55:44']
+['Montréal ', 'construction', 2, "L'Action", 'Début de la construction pour le PAX Habitat', '2021-06-25', 2, 'https://www.laction.com/article/2021/06/25/debut-de-la-construction-pour-le-pax-habitat', '2021-06-27 13:55:44']
+['Montréal ', 'construction', 3, 'journal le soir', 'Construction Technipro BSL seul soumissionnaire pour le pavillon de médecine', '2021-06-26', 1, 'https://journallesoir.ca/2021/06/26/construction-technipro-bsl-seul-soumissionnaire-pour-le-pavillon-de-medecine/', '2021-06-27 13:55:44']
+['Montréal ', 'construction', 4, 'Le Nouvelliste - Groupe Capitales Médias', "Pas de construction sur le site d'Aleris avant deux ans", '2021-06-26', 1, 'https://www.lenouvelliste.ca/ma-region/pas-de-construction-sur-le-site-daleris-avant-deux-ans-41b16114e563750e740c7379de7ad00b', '2021-06-27 13:55:44']
+['Montréal ', 'construction', 5, 'La Presse', 'Les licences bidon de la construction | La Presse', '2021-06-13', 14, 'https://www.lapresse.ca/debats/editoriaux/2021-06-13/les-licences-bidon-de-la-construction.php', '2021-06-27 13:55:45']
+['Montréal ', 'construction', 6, 'Le Journal de Québec', 'Le boom de la construction en train de provoquer une pénurie de béton', '2021-06-09', 18, 'https://www.journaldequebec.com/2021/06/09/le-boom-de-la-construction-en-train-de-provoquer-une-penurie-de-beton', '2021-06-27 13:55:45']
+['Montréal ', 'construction', 7, 'TVA Nouvelles', 'Hausse du prix des matériaux: plusieurs projets de construction reportés ou abandonnés', '2021-06-23', 4, 'https://www.tvanouvelles.ca/2021/06/22/hausse-du-prix-des-materiaux-plusieurs-projets-de-construction-reportes-ou-abandonnes', '2021-06-27 13:55:45']
+['Montréal ', 'construction', 8, 'Radio-Canada.ca', 'Construction : la relance économique de la CAQ met « beaucoup de pression »', '2021-05-31', 27, 'https://ici.radio-canada.ca/nouvelle/1797242/couts-construction-entreprises-negociation-contrats-maisons-aines', '2021-06-27 13:55:45']
+['Montréal ', 'construction', 9, 'Le Journal de Montréal', 'Des constructions récentes déjà mal en point', '2021-06-12', 15, 'https://www.journaldemontreal.com/2021/06/12/des-constructions-recentes-deja-mal-en-point', '2021-06-27 13:55:45']
+['Montréal ', 'construction', 10, 'ICI.Radio-Canada.ca', "Un pas de plus vers la construction d'un nouvel hôpital à Maria", '2021-06-08', 19, 'https://ici.radio-canada.ca/nouvelle/1799979/hopital-maria-construction-cisss-gaspesie-pdci-etape-financement', '2021-06-27 13:55:45']
+['Montréal ', 'construction', 11, 'Journal Métro', "Construction: des coûts plus élevés et des retards d'approvisionnement", '2021-06-17', 10, 'https://journalmetro.com/local/ouest-de-lile/2657040/couts-et-retards-dapprovisionnement/', '2021-06-27 13:55:46']
+['Montréal ', 'construction', 12, 'Ontario Newsroom', "L'Ontario investit dans la formation des travailleurs de la construction | Salle de presse de l'Ontario", '2021-06-21', 6, 'https://news.ontario.ca/fr/release/1000381/lontario-investit-dans-la-formation-des-travailleurs-de-la-construction', '2021-06-27 13:55:46']
+['Montréal ', 'construction', 13, 'Info Dimanche', "Les entreprises de construction dans l'après-pandémie; comment s'adapter | infodimanche.com", '2021-06-23', 4, 'https://www.infodimanche.com/actualites/id-plus-reportages-finances/430031/les-entreprises-de-construction-dans-lapres-pandemie;-comment-sadapter', '2021-06-27 13:55:46']
+['Montréal ', 'construction', 14, 'Libération', 'Urgence climatique : le pays de Galles dit stop à la construction de nouvelles routes', '2021-06-27', 0, 'https://www.liberation.fr/environnement/climat/urgence-climatique-le-pays-de-galles-dit-stop-a-la-construction-de-nouvelles-routes-20210627_CBOABQ5OANADHESJXUNMCKO3SY/', '2021-06-27 13:55:46']
+['Montréal ', 'construction', 15, 'Journal Métro', "Tour d'horizon des chantiers de construction | Verdun", '2021-06-23', 4, 'https://journalmetro.com/local/verdun/2659138/tour-dhorizon-des-chantiers-de-construction/', '2021-06-27 13:55:46']
+['Montréal ', 'construction', 16, 'Hebdo Rive Nord', 'Construction du futur Centre de service Exo à Repentigny', '2021-06-24', 3, 'https://www.hebdorivenord.com/article/2021/06/24/construction-du-futur-centre-de-service-exo-a-repentigny', '2021-06-27 13:55:47']
+['Montréal ', 'construction', 17, 'La Presse', "Construction | Une licence d'entrepreneur de la RBQ n'est pas gage de qualité, dénonce la VG", '2021-06-02', 25, 'https://www.lapresse.ca/affaires/2021-06-02/construction/une-licence-d-entrepreneur-de-la-rbq-n-est-pas-gage-de-qualite-denonce-la-vg.php', '2021-06-27 13:55:47']
+['Montréal ', 'construction', 18, 'ICI.Radio-Canada.ca', '150 Autochtones formés à des métiers de la construction à Greenstone', '2021-06-17', 10, 'https://ici.radio-canada.ca/nouvelle/1802376/industrie-miniere-education-premieres-nations', '2021-06-27 13:55:47']
+['Montréal ', 'construction', 19, 'La Presse', "Vos réactions à l'éditorial « Les licences bidon de la construction »", '2021-06-15', 12, 'https://www.lapresse.ca/debats/courrier-des-lecteurs/2021-06-15/vos-reactions-a-l-editorial-les-licences-bidon-de-la-construction.php', '2021-06-27 13:55:47']
+['Montréal ', 'construction', 20, 'Le Devoir', "Québec investit 2,1 milliards pour la construction et la rénovation d'écoles", '2021-06-17', 10, 'https://www.ledevoir.com/politique/quebec/611646/quebec-investit-2-1-milliards-pour-la-construction-et-la-renovation-d-ecoles', '2021-06-27 13:55:47']
+['Montréal ', 'construction', 21, 'La Nouvelle Union', 'Quels dangers doivent être prévenus par les entreprises de construction?', '2021-06-16', 11, 'https://www.lanouvelle.net/2021/06/16/quels-dangers-doivent-etre-prevenus-par-les-entreprises-de-construction/', '2021-06-27 13:55:48']
+['Montréal ', 'construction', 22, 'Le Soleil - Groupe Capitales Médias', 'Des maisons de ville en construction à la place de la clinique médicale Pasteur de Limoilou', '2021-06-21', 6, 'https://www.lesoleil.com/actualite/la-capitale/des-maisons-de-ville-en-construction-a-la-place-de-la-clinique-medicale-pasteur-de-limoilou-c8e5889119629b6a2c1f1f05c0847666', '2021-06-27 13:55:48']
+['Montréal ', 'construction', 23, 'Le Journal de Québec', 'Début de la construction de la maison des aînés et alternative de RDP', '2021-06-03', 24, 'https://www.journaldequebec.com/2021/06/03/debut-de-la-construction-de-la-maison-des-aines-et-alternative-de-rdp-1', '2021-06-27 13:55:48']
+['Montréal ', 'construction', 24, 'Le Progrès', 'Allègre | La construction du nouvel Ehpad démarrera en septembre', '2021-06-27', 0, 'https://www.leprogres.fr/sante/2021/06/27/la-construction-du-nouvel-ehpad-demarrera-en-septembre', '2021-06-27 13:55:49']
+['Montréal ', 'construction', 25, 'iHeartRadio', 'SAINT-HYACINTHE: Début de la construction du complexe du Groupe Sélection en août', '2021-06-14', 13, 'https://www.iheartradio.ca/boom/boom-1041/nouvelles/saint-hyacinthe-debut-de-la-construction-du-complexe-du-groupe-selection-en-aout-1.15420065', '2021-06-27 13:55:49']

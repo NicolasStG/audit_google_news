@@ -1,3 +1,5 @@
+#!/Users/goognewsqc/audit_google_news/env/bin/python
+
 # coding: utf-8
 # ©2020 Nicolas St-Germain GNU GPL v3.
 
