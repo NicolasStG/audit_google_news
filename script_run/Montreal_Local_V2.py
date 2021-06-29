@@ -220,6 +220,7 @@ def process_city(city: dict) -> None:
     infos = [city["ville"], city["latitude"], city["longitude"]]
     print("<>" * 32)
     villes = infos[0]  # imprimer juste les villes
+    print(create_path_document_csv(villes))
 
     with safe_open_w(create_path_document_csv(villes)) as f2:
         creation_fichier = csv.writer(f2)
@@ -228,7 +229,9 @@ def process_city(city: dict) -> None:
         national = termes[1]
         mixte = termes[2]
         for term in local: #termin_variable_
+            print("---" * 25)
             print(term)
+            print("---" * 25)
             research_term_in_city(villes, creation_fichier, term, infos)                
 
 def main() -> None:
