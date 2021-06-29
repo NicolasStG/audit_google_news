@@ -227,8 +227,8 @@ def process_city(city: dict) -> None:
         creation_fichier = csv.writer(f2)
         creation_fichier.writerow(["Villes", "Mots-clés", "position du média", "Nom du média", "Titre de l'article", "Date de publication", "Journée de différence","URL", "date et heure saisie"])
         local = termes[0]
-        national = termes[1]
-        mixte = termes[2]
+        national = termes[2]
+        mixte = termes[1]
         for term in mixte: #termin_variable_
             print("---" * 25)
             print(term)
