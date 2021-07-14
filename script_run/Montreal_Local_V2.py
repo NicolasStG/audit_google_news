@@ -50,7 +50,7 @@ def create_path_document():
 
 def create_path_document_csv(villes): #csvfilename
     file = villes.replace(" ", "") + "_"
-    term_type = "Local" + "_V2_" + get_current_time() + ".csv"
+    term_type = "V2_" + "Local_" + get_current_time() + ".csv"
 
     return create_path_document() + file + term_type
 
@@ -197,8 +197,9 @@ def write_article_to_csv(creation_fichier, villes, term, n, article) -> None:
     date = get_article_date(article)
     days_diff = calculate_days_diff(article)
     time_stamp = get_full_current_time()
+    keyword_type = "local"
 
-    csv_rows = [villes, term, n, nom_media, titre_article, date, days_diff, lien_article, time_stamp]
+    csv_rows = [villes + "_V2", term, n, nom_media, titre_article, date, days_diff, lien_article, time_stamp, keyword_type]
     print(csv_rows)
     creation_fichier.writerow(csv_rows)
 
@@ -224,7 +225,7 @@ def process_city(city: dict) -> None:
 
     with safe_open_w(create_path_document_csv(villes)) as f2:
         creation_fichier = csv.writer(f2)
-        creation_fichier.writerow(["Villes", "Mots-clés", "position du média", "Nom du média", "Titre de l'article", "Date de publication", "Journée de différence","URL", "date et heure saisie"])
+        creation_fichier.writerow(["Villes","Mots-clés", "position du média", "Nom du média", "Titre de l'article", "Date de publication", "Journée de différence","URL", "date et heure saisie", "type de mot-clés"])
         local = termes[0]
         national = termes[2]
         mixte = termes[1]
