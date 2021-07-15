@@ -5,7 +5,7 @@ termes = [
 		'incendie',
 		'police OR Sûreté',
 		'Cégep',
-		'Centre de services scolaire OR Commission scolaire',
+		'"Centre de services scolaire" OR "Commission scolaire"',
 		'CISSS OR CIUSSS',
 		'maire OR mairesse',
 		'candidat',
