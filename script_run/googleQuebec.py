@@ -711,7 +711,7 @@ cities = [
  },
  {
    "code": 63048,
-   "ville": "Saint-Lin--Laurentides ",
+   "ville": "Saint-Lin-Laurentides ",
    "pop": 22589,
    "latitude": 45.85139,
    "longitude": -73.75583,
