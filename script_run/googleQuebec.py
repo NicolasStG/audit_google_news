@@ -36,7 +36,7 @@ termes = [
 cities = [
  {
    "code": 48028,
-   "ville": "Acton Vale ",
+   "ville": "Acton Vale",
    "pop": 7743,
    "latitude": 45.64778,
    "longitude": -72.56472,
@@ -45,7 +45,7 @@ cities = [
  },
  {
    "code": 93042,
-   "ville": "Alma ",
+   "ville": "Alma",
    "pop": 30791,
    "latitude": 48.54972,
    "longitude": -71.65333,
@@ -54,7 +54,7 @@ cities = [
  },
  {
    "code": 88055,
-   "ville": "Amos ",
+   "ville": "Amos",
    "pop": 12734,
    "latitude": 48.56472,
    "longitude": -78.1125,
@@ -63,7 +63,7 @@ cities = [
  },
  {
    "code": 7047,
-   "ville": "Amqui ",
+   "ville": "Amqui",
    "pop": 6082,
    "latitude": 48.46194,
    "longitude": -67.43222,
@@ -72,7 +72,7 @@ cities = [
  },
  {
    "code": 96020,
-   "ville": "Baie-Comeau ",
+   "ville": "Baie-Comeau",
    "pop": 21061,
    "latitude": 49.22083,
    "longitude": -68.14917,
@@ -81,7 +81,7 @@ cities = [
  },
  {
    "code": 16013,
-   "ville": "Baie-Saint-Paul ",
+   "ville": "Baie-Saint-Paul",
    "pop": 7168,
    "latitude": 47.44056,
    "longitude": -70.50944,
@@ -90,7 +90,7 @@ cities = [
  },
  {
    "code": 27028,
-   "ville": "Beauceville ",
+   "ville": "Beauceville",
    "pop": 6313,
    "latitude": 46.21472,
    "longitude": -70.77583,
@@ -99,7 +99,7 @@ cities = [
  },
  {
    "code": 38010,
-   "ville": "Bécancour ",
+   "ville": "Bécancour",
    "pop": 13545,
    "latitude": 46.34833,
    "longitude": -72.435,
@@ -108,7 +108,7 @@ cities = [
  },
  {
    "code": 73015,
-   "ville": "Blainville ",
+   "ville": "Blainville",
    "pop": 60695,
    "latitude": 45.67944,
    "longitude": -73.87389,
@@ -117,7 +117,7 @@ cities = [
  },
  {
    "code": 98005,
-   "ville": "Blanc-Sablon ",
+   "ville": "Blanc-Sablon",
    "pop": 1085,
    "latitude": 51.4175,
    "longitude": -57.18528,
@@ -126,7 +126,7 @@ cities = [
  },
  {
    "code": 21045,
-   "ville": "Boischatel ",
+   "ville": "Boischatel",
    "pop": 8148,
    "latitude": 46.89694,
    "longitude": -71.14,
@@ -135,7 +135,7 @@ cities = [
  },
  {
    "code": 6013,
-   "ville": "Carleton-sur-Mer ",
+   "ville": "Carleton-sur-Mer",
    "pop": 3985,
    "latitude": 48.10167,
    "longitude": -66.12194,
@@ -144,7 +144,7 @@ cities = [
  },
  {
    "code": 57005,
-   "ville": "Chambly ",
+   "ville": "Chambly",
    "pop": 31360,
    "latitude": 45.45,
    "longitude": -73.29111,
@@ -153,7 +153,7 @@ cities = [
  },
  {
    "code": 2028,
-   "ville": "Chandler ",
+   "ville": "Chandler",
    "pop": 7400,
    "latitude": 48.34861,
    "longitude": -64.67833,
@@ -162,7 +162,7 @@ cities = [
  },
  {
    "code": 67050,
-   "ville": "Châteauguay ",
+   "ville": "Châteauguay",
    "pop": 49927,
    "latitude": 45.36083,
    "longitude": -73.75056,
@@ -171,7 +171,7 @@ cities = [
  },
  {
    "code": 99025,
-   "ville": "Chibougamau ",
+   "ville": "Chibougamau",
    "pop": 7493,
    "latitude": 49.91333,
    "longitude": -74.36861,
@@ -180,7 +180,7 @@ cities = [
  },
  {
    "code": 99814,
-   "ville": "Chisasibi ",
+   "ville": "Chisasibi",
    "pop": 5203,
    "latitude": 53.65528,
    "longitude": -78.79778,
@@ -189,7 +189,7 @@ cities = [
  },
  {
    "code": 44037,
-   "ville": "Coaticook ",
+   "ville": "Coaticook",
    "pop": 8906,
    "latitude": 45.13444,
    "longitude": -71.805,
@@ -198,7 +198,7 @@ cities = [
  },
  {
    "code": 41038,
-   "ville": "Cookshire-Eaton ",
+   "ville": "Cookshire-Eaton",
    "pop": 5431,
    "latitude": 45.41306,
    "longitude": -71.62611,
@@ -207,7 +207,7 @@ cities = [
  },
  {
    "code": 46080,
-   "ville": "Cowansville ",
+   "ville": "Cowansville",
    "pop": 14695,
    "latitude": 45.20472,
    "longitude": -72.74111,
@@ -216,7 +216,7 @@ cities = [
  },
  {
    "code": 92022,
-   "ville": "Dolbeau-Mistassini ",
+   "ville": "Dolbeau-Mistassini",
    "pop": 14072,
    "latitude": 48.87639,
    "longitude": -72.22583,
@@ -225,7 +225,7 @@ cities = [
  },
  {
    "code": 49058,
-   "ville": "Drummondville ",
+   "ville": "Drummondville",
    "pop": 78376,
    "latitude": 45.88056,
    "longitude": -72.48417,
@@ -234,7 +234,7 @@ cities = [
  },
  {
    "code": 97035,
-   "ville": "Fermont ",
+   "ville": "Fermont",
    "pop": 2447,
    "latitude": 52.7975,
    "longitude": -67.09028,
@@ -243,7 +243,7 @@ cities = [
  },
  {
    "code": 95045,
-   "ville": "Forestville ",
+   "ville": "Forestville",
    "pop": 2924,
    "latitude": 48.73833,
    "longitude": -69.07694,
@@ -252,7 +252,7 @@ cities = [
  },
  {
    "code": 3005,
-   "ville": "Gaspé ",
+   "ville": "Gaspé",
    "pop": 15024,
    "latitude": 48.82472,
    "longitude": -64.47611,
@@ -261,7 +261,7 @@ cities = [
  },
  {
    "code": 81017,
-   "ville": "Gatineau ",
+   "ville": "Gatineau",
    "pop": 287868,
    "latitude": 45.42778,
    "longitude": -75.71111,
@@ -270,7 +270,7 @@ cities = [
  },
  {
    "code": 47017,
-   "ville": "Granby ",
+   "ville": "Granby",
    "pop": 68540,
    "latitude": 45.39889,
    "longitude": -72.72111,
@@ -279,7 +279,7 @@ cities = [
  },
  {
    "code": 98040,
-   "ville": "Havre-Saint-Pierre ",
+   "ville": "Havre-Saint-Pierre",
    "pop": 3371,
    "latitude": 50.245,
    "longitude": -63.59694,
@@ -288,7 +288,7 @@ cities = [
  },
  {
    "code": 61025,
-   "ville": "Joliette ",
+   "ville": "Joliette",
    "pop": 21096,
    "latitude": 46.02389,
    "longitude": -73.44278,
@@ -297,7 +297,7 @@ cities = [
  },
  {
    "code": 99095,
-   "ville": "Kuujjuaq ",
+   "ville": "Kuujjuaq",
    "pop": 2848,
    "latitude": 58.1075,
    "longitude": -68.40361,
@@ -306,7 +306,7 @@ cities = [
  },
  {
    "code": 17078,
-   "ville": "L'Islet ",
+   "ville": "L'Islet",
    "pop": 3803,
    "latitude": 47.10361,
    "longitude": -70.35194,
@@ -315,7 +315,7 @@ cities = [
  },
  {
    "code": 15013,
-   "ville": "La Malbaie ",
+   "ville": "La Malbaie",
    "pop": 8141,
    "latitude": 47.65222,
    "longitude": -70.14889,
@@ -324,7 +324,7 @@ cities = [
  },
  {
    "code": 14085,
-   "ville": "La Pocatière ",
+   "ville": "La Pocatière",
    "pop": 4051,
    "latitude": 47.37028,
    "longitude": -70.03278,
@@ -333,7 +333,7 @@ cities = [
  },
  {
    "code": 87090,
-   "ville": "La Sarre ",
+   "ville": "La Sarre",
    "pop": 7305,
    "latitude": 48.80694,
    "longitude": -79.20472,
@@ -342,7 +342,7 @@ cities = [
  },
  {
    "code": 90012,
-   "ville": "La Tuque ",
+   "ville": "La Tuque",
    "pop": 10912,
    "latitude": 47.44083,
    "longitude": -72.78139,
@@ -351,7 +351,7 @@ cities = [
  },
  {
    "code": 28053,
-   "ville": "Lac-Etchemin ",
+   "ville": "Lac-Etchemin",
    "pop": 3878,
    "latitude": 46.39639,
    "longitude": -70.50444,
@@ -360,7 +360,7 @@ cities = [
  },
  {
    "code": 30030,
-   "ville": "Lac-Mégantic ",
+   "ville": "Lac-Mégantic",
    "pop": 5569,
    "latitude": 45.57361,
    "longitude": -70.88222,
@@ -369,7 +369,7 @@ cities = [
  },
  {
    "code": 76020,
-   "ville": "Lachute ",
+   "ville": "Lachute",
    "pop": 13393,
    "latitude": 45.65556,
    "longitude": -74.33944,
@@ -378,7 +378,7 @@ cities = [
  },
  {
    "code": 65005,
-   "ville": "Laval ",
+   "ville": "Laval",
    "pop": 438973,
    "latitude": 45.55167,
    "longitude": -73.74528,
@@ -387,7 +387,7 @@ cities = [
  },
  {
    "code": 52007,
-   "ville": "Lavaltrie ",
+   "ville": "Lavaltrie",
    "pop": 14195,
    "latitude": 45.88444,
    "longitude": -73.27694,
@@ -396,7 +396,7 @@ cities = [
  },
  {
    "code": 1023,
-   "ville": "Les Îles-de-la-Madeleine ",
+   "ville": "Les Îles-de-la-Madeleine",
    "pop": 12168,
    "latitude": 47.37611,
    "longitude": -61.86806,
@@ -405,7 +405,7 @@ cities = [
  },
  {
    "code": 25213,
-   "ville": "Lévis ",
+   "ville": "Lévis",
    "pop": 147673,
    "latitude": 46.75806,
    "longitude": -71.24083,
@@ -414,7 +414,7 @@ cities = [
  },
  {
    "code": 58227,
-   "ville": "Longueuil ",
+   "ville": "Longueuil",
    "pop": 249997,
    "latitude": 45.51389,
    "longitude": -73.43139,
@@ -423,7 +423,7 @@ cities = [
  },
  {
    "code": 51015,
-   "ville": "Louiseville ",
+   "ville": "Louiseville",
    "pop": 7183,
    "latitude": 46.25556,
    "longitude": -72.9425,
@@ -432,7 +432,7 @@ cities = [
  },
  {
    "code": 45072,
-   "ville": "Magog ",
+   "ville": "Magog",
    "pop": 27280,
    "latitude": 45.265,
    "longitude": -72.14667,
@@ -441,7 +441,7 @@ cities = [
  },
  {
    "code": 83065,
-   "ville": "Maniwaki ",
+   "ville": "Maniwaki",
    "pop": 3828,
    "latitude": 46.37444,
    "longitude": -75.98194,
@@ -450,7 +450,7 @@ cities = [
  },
  {
    "code": 84065,
-   "ville": "Mansfield-et-Pontefract ",
+   "ville": "Mansfield-et-Pontefract",
    "pop": 2341,
    "latitude": 45.86111,
    "longitude": -76.73917,
@@ -459,7 +459,7 @@ cities = [
  },
  {
    "code": 55048,
-   "ville": "Marieville ",
+   "ville": "Marieville",
    "pop": 11159,
    "latitude": 45.43139,
    "longitude": -73.16361,
@@ -468,7 +468,7 @@ cities = [
  },
  {
    "code": 8053,
-   "ville": "Matane ",
+   "ville": "Matane",
    "pop": 14051,
    "latitude": 48.84333,
    "longitude": -67.53056,
@@ -477,7 +477,7 @@ cities = [
  },
  {
    "code": 74005,
-   "ville": "Mirabel ",
+   "ville": "Mirabel",
    "pop": 57500,
    "latitude": 45.66417,
    "longitude": -74.00194,
@@ -486,7 +486,7 @@ cities = [
  },
  {
    "code": 9077,
-   "ville": "Mont-Joli ",
+   "ville": "Mont-Joli",
    "pop": 6218,
    "latitude": 48.58528,
    "longitude": -68.18917,
@@ -495,7 +495,7 @@ cities = [
  },
  {
    "code": 79088,
-   "ville": "Mont-Laurier ",
+   "ville": "Mont-Laurier",
    "pop": 14160,
    "latitude": 46.54611,
    "longitude": -75.50306,
@@ -504,7 +504,7 @@ cities = [
  },
  {
    "code": 18050,
-   "ville": "Montmagny ",
+   "ville": "Montmagny",
    "pop": 11088,
    "latitude": 46.98139,
    "longitude": -70.5575,
@@ -513,7 +513,7 @@ cities = [
  },
  {
    "code": 5070,
-   "ville": "New Richmond ",
+   "ville": "New Richmond",
    "pop": 3718,
    "latitude": 48.16222,
    "longitude": -65.86139,
@@ -522,7 +522,7 @@ cities = [
  },
  {
    "code": 50072,
-   "ville": "Nicolet ",
+   "ville": "Nicolet",
    "pop": 8415,
    "latitude": 46.22639,
    "longitude": -72.61611,
@@ -531,7 +531,7 @@ cities = [
  },
  {
    "code": 37235,
-   "ville": "Notre-Dame-du-Mont-Carmel ",
+   "ville": "Notre-Dame-du-Mont-Carmel",
    "pop": 5953,
    "latitude": 46.47278,
    "longitude": -72.67556,
@@ -540,7 +540,7 @@ cities = [
  },
  {
    "code": 69037,
-   "ville": "Ormstown ",
+   "ville": "Ormstown",
    "pop": 3676,
    "latitude": 45.12111,
    "longitude": -73.99083,
@@ -549,7 +549,7 @@ cities = [
  },
  {
    "code": 32040,
-   "ville": "Plessisville ",
+   "ville": "Plessisville",
    "pop": 6596,
    "latitude": 46.21889,
    "longitude": -71.77194,
@@ -558,7 +558,7 @@ cities = [
  },
  {
    "code": 23027,
-   "ville": "Québec ",
+   "ville": "Québec",
    "pop": 546424,
    "latitude": 46.81389,
    "longitude": -71.20806,
@@ -567,7 +567,7 @@ cities = [
  },
  {
    "code": 62037,
-   "ville": "Rawdon ",
+   "ville": "Rawdon",
    "pop": 11421,
    "latitude": 46.04222,
    "longitude": -73.70722,
@@ -576,7 +576,7 @@ cities = [
  },
  {
    "code": 60013,
-   "ville": "Repentigny ",
+   "ville": "Repentigny",
    "pop": 85676,
    "latitude": 45.74194,
    "longitude": -73.45139,
@@ -585,7 +585,7 @@ cities = [
  },
  {
    "code": 10043,
-   "ville": "Rimouski ",
+   "ville": "Rimouski",
    "pop": 49419,
    "latitude": 48.44917,
    "longitude": -68.525,
@@ -594,7 +594,7 @@ cities = [
  },
  {
    "code": 12072,
-   "ville": "Rivière-du-Loup ",
+   "ville": "Rivière-du-Loup",
    "pop": 20055,
    "latitude": 47.83611,
    "longitude": -69.53667,
@@ -603,7 +603,7 @@ cities = [
  },
  {
    "code": 86042,
-   "ville": "Rouyn-Noranda ",
+   "ville": "Rouyn-Noranda",
    "pop": 43055,
    "latitude": 48.2375,
    "longitude": -79.01722,
@@ -612,7 +612,7 @@ cities = [
  },
  {
    "code": 94068,
-   "ville": "Saguenay ",
+   "ville": "Saguenay",
    "pop": 146797,
    "latitude": 48.42778,
    "longitude": -71.06278,
@@ -621,7 +621,7 @@ cities = [
  },
  {
    "code": 80027,
-   "ville": "Saint-André-Avellin ",
+   "ville": "Saint-André-Avellin",
    "pop": 3776,
    "latitude": 45.725,
    "longitude": -75.05417,
@@ -630,7 +630,7 @@ cities = [
  },
  {
    "code": 33090,
-   "ville": "Saint-Apollinaire ",
+   "ville": "Saint-Apollinaire",
    "pop": 7086,
    "latitude": 46.61667,
    "longitude": -71.51056,
@@ -639,7 +639,7 @@ cities = [
  },
  {
    "code": 72005,
-   "ville": "Saint-Eustache ",
+   "ville": "Saint-Eustache",
    "pop": 45093,
    "latitude": 45.5575,
    "longitude": -73.88833,
@@ -648,7 +648,7 @@ cities = [
  },
  {
    "code": 91042,
-   "ville": "Saint-Félicien ",
+   "ville": "Saint-Félicien",
    "pop": 10286,
    "latitude": 48.65278,
    "longitude": -72.44667,
@@ -657,7 +657,7 @@ cities = [
  },
  {
    "code": 29073,
-   "ville": "Saint-Georges ",
+   "ville": "Saint-Georges",
    "pop": 33370,
    "latitude": 46.12278,
    "longitude": -70.67139,
@@ -666,7 +666,7 @@ cities = [
  },
  {
    "code": 19068,
-   "ville": "Saint-Henri ",
+   "ville": "Saint-Henri",
    "pop": 5744,
    "latitude": 46.6925,
    "longitude": -71.0675,
@@ -675,7 +675,7 @@ cities = [
  },
  {
    "code": 94240,
-   "ville": "Saint-Honoré ",
+   "ville": "Saint-Honoré",
    "pop": 6029,
    "latitude": 48.53472,
    "longitude": -71.08639,
@@ -684,7 +684,7 @@ cities = [
  },
  {
    "code": 54048,
-   "ville": "Saint-Hyacinthe ",
+   "ville": "Saint-Hyacinthe",
    "pop": 56810,
    "latitude": 45.62611,
    "longitude": -72.94639,
@@ -693,7 +693,7 @@ cities = [
  },
  {
    "code": 56083,
-   "ville": "Saint-Jean-sur-Richelieu ",
+   "ville": "Saint-Jean-sur-Richelieu",
    "pop": 97711,
    "latitude": 45.30556,
    "longitude": -73.25361,
@@ -702,7 +702,7 @@ cities = [
  },
  {
    "code": 75017,
-   "ville": "Saint-Jérôme ",
+   "ville": "Saint-Jérôme",
    "pop": 78747,
    "latitude": 45.77528,
    "longitude": -74.00361,
@@ -711,7 +711,7 @@ cities = [
  },
  {
    "code": 63048,
-   "ville": "Saint-Lin-Laurentides ",
+   "ville": "Saint-Lin-Laurentides",
    "pop": 22589,
    "latitude": 45.85139,
    "longitude": -73.75583,
@@ -720,7 +720,7 @@ cities = [
  },
  {
    "code": 20025,
-   "ville": "Saint-Pierre-de-l'Île-d'Orléans ",
+   "ville": "Saint-Pierre-de-l'Île-d'Orléans",
    "pop": 2004,
    "latitude": 46.88833,
    "longitude": -71.07,
@@ -729,7 +729,7 @@ cities = [
  },
  {
    "code": 34128,
-   "ville": "Saint-Raymond ",
+   "ville": "Saint-Raymond",
    "pop": 10761,
    "latitude": 46.89139,
    "longitude": -71.8325,
@@ -738,7 +738,7 @@ cities = [
  },
  {
    "code": 68055,
-   "ville": "Saint-Rémi ",
+   "ville": "Saint-Rémi",
    "pop": 8836,
    "latitude": 45.25917,
    "longitude": -73.61417,
@@ -747,7 +747,7 @@ cities = [
  },
  {
    "code": 35027,
-   "ville": "Saint-Tite ",
+   "ville": "Saint-Tite",
    "pop": 3693,
    "latitude": 46.72694,
    "longitude": -72.56472,
@@ -756,7 +756,7 @@ cities = [
  },
  {
    "code": 77022,
-   "ville": "Sainte-Adèle ",
+   "ville": "Sainte-Adèle",
    "pop": 13516,
    "latitude": 45.95556,
    "longitude": -74.13944,
@@ -765,7 +765,7 @@ cities = [
  },
  {
    "code": 78032,
-   "ville": "Sainte-Agathe-des-Monts ",
+   "ville": "Sainte-Agathe-des-Monts",
    "pop": 10786,
    "latitude": 46.04806,
    "longitude": -74.28361,
@@ -774,7 +774,7 @@ cities = [
  },
  {
    "code": 4037,
-   "ville": "Sainte-Anne-des-Monts ",
+   "ville": "Sainte-Anne-des-Monts",
    "pop": 6277,
    "latitude": 49.12972,
    "longitude": -66.4875,
@@ -783,7 +783,7 @@ cities = [
  },
  {
    "code": 59010,
-   "ville": "Sainte-Julie ",
+   "ville": "Sainte-Julie",
    "pop": 30095,
    "latitude": 45.58778,
    "longitude": -73.32611,
@@ -792,7 +792,7 @@ cities = [
  },
  {
    "code": 26030,
-   "ville": "Sainte-Marie ",
+   "ville": "Sainte-Marie",
    "pop": 13583,
    "latitude": 46.43833,
    "longitude": -71.02139,
@@ -801,7 +801,7 @@ cities = [
  },
  {
    "code": 70052,
-   "ville": "Salaberry-de-Valleyfield ",
+   "ville": "Salaberry-de-Valleyfield",
    "pop": 42306,
    "latitude": 45.25528,
    "longitude": -74.13167,
@@ -810,7 +810,7 @@ cities = [
  },
  {
    "code": 97007,
-   "ville": "Sept-Îles ",
+   "ville": "Sept-Îles",
    "pop": 25063,
    "latitude": 50.20972,
    "longitude": -66.38528,
@@ -819,7 +819,7 @@ cities = [
  },
  {
    "code": 36033,
-   "ville": "Shawinigan ",
+   "ville": "Shawinigan",
    "pop": 49382,
    "latitude": 46.54111,
    "longitude": -72.74528,
@@ -828,7 +828,7 @@ cities = [
  },
  {
    "code": 43027,
-   "ville": "Sherbrooke ",
+   "ville": "Sherbrooke",
    "pop": 168518,
    "latitude": 45.40417,
    "longitude": -71.89306,
@@ -837,7 +837,7 @@ cities = [
  },
  {
    "code": 53052,
-   "ville": "Sorel-Tracy ",
+   "ville": "Sorel-Tracy",
    "pop": 34890,
    "latitude": 46.04361,
    "longitude": -73.11333,
@@ -846,7 +846,7 @@ cities = [
  },
  {
    "code": 22035,
-   "ville": "Stoneham-et-Tewkesbury ",
+   "ville": "Stoneham-et-Tewkesbury",
    "pop": 9134,
    "latitude": 46.99917,
    "longitude": -71.36806,
@@ -855,7 +855,7 @@ cities = [
  },
  {
    "code": 13073,
-   "ville": "Témiscouata-sur-le-Lac ",
+   "ville": "Témiscouata-sur-le-Lac",
    "pop": 4913,
    "latitude": 47.68333,
    "longitude": -68.88333,
@@ -864,7 +864,7 @@ cities = [
  },
  {
    "code": 64008,
-   "ville": "Terrebonne ",
+   "ville": "Terrebonne",
    "pop": 117615,
    "latitude": 45.69167,
    "longitude": -73.63444,
@@ -873,7 +873,7 @@ cities = [
  },
  {
    "code": 31084,
-   "ville": "Thetford Mines ",
+   "ville": "Thetford Mines",
    "pop": 25618,
    "latitude": 46.08889,
    "longitude": -71.30194,
@@ -882,7 +882,7 @@ cities = [
  },
  {
    "code": 11040,
-   "ville": "Trois-Pistoles ",
+   "ville": "Trois-Pistoles",
    "pop": 3152,
    "latitude": 48.12556,
    "longitude": -69.17528,
@@ -891,7 +891,7 @@ cities = [
  },
  {
    "code": 37067,
-   "ville": "Trois-Rivières ",
+   "ville": "Trois-Rivières",
    "pop": 138200,
    "latitude": 46.34306,
    "longitude": -72.54333,
@@ -900,7 +900,7 @@ cities = [
  },
  {
    "code": 89008,
-   "ville": "Val-d'Or ",
+   "ville": "Val-d'Or",
    "pop": 32896,
    "latitude": 48.10194,
    "longitude": -77.78944,
@@ -909,7 +909,7 @@ cities = [
  },
  {
    "code": 82015,
-   "ville": "Val-des-Monts ",
+   "ville": "Val-des-Monts",
    "pop": 12241,
    "latitude": 45.665,
    "longitude": -75.73417,
@@ -918,7 +918,7 @@ cities = [
  },
  {
    "code": 40043,
-   "ville": "Val-des-Sources ",
+   "ville": "Val-des-Sources",
    "pop": 6840,
    "latitude": 45.7775,
    "longitude": -71.93833,
@@ -927,7 +927,7 @@ cities = [
  },
  {
    "code": 71083,
-   "ville": "Vaudreuil-Dorion ",
+   "ville": "Vaudreuil-Dorion",
    "pop": 41017,
    "latitude": 45.40361,
    "longitude": -74.03667,
@@ -936,7 +936,7 @@ cities = [
  },
  {
    "code": 39062,
-   "ville": "Victoriaville ",
+   "ville": "Victoriaville",
    "pop": 47466,
    "latitude": 46.05583,
    "longitude": -71.96056,
@@ -945,7 +945,7 @@ cities = [
  },
  {
    "code": 85025,
-   "ville": "Ville-Marie ",
+   "ville": "Ville-Marie",
    "pop": 2476,
    "latitude": 47.32889,
    "longitude": -79.4375,
@@ -954,7 +954,7 @@ cities = [
  },
  {
    "code": 42088,
-   "ville": "Windsor ",
+   "ville": "Windsor",
    "pop": 5327,
    "latitude": 45.56861,
    "longitude": -72.00583,
@@ -965,7 +965,7 @@ cities = [
 
 montreal =  {
    "code": 66023,
-   "ville": "Montréal ",
+   "ville": "Montréal",
    "pop": 1806022,
    "latitude": 45.50889,
    "longitude": -73.55417,
