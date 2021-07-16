@@ -1,7 +1,7 @@
 #!/Users/goognewsqc/audit_google_news/env/bin/python
 
 # coding: utf-8
-# ©2020 Ni colas St-Germain GNU GPL v3.
+# ©2020 Nicolas St-Germain GNU GPL v3.
 
 import csv, errno, os, os.path, re, requests, time
 
@@ -10,7 +10,7 @@ from datetime import datetime
 from urllib3 import filepost
 from googleQuebec import termes, cities, montreal
 from selenium import webdriver
-from selenium.common.exceptions import NoSuchElementException
+from selenium.common.exceptions import NoSuchElementException, WebDriverException
 from selenium.webdriver import FirefoxOptions
 from selenium.webdriver.remote.webelement import WebElement
 from selenium.webdriver.common.by import By
@@ -117,20 +117,28 @@ def get_localisation_confirmation(infos : str, villes : str) -> filepost:
     if os.path.exists(confirm_path_document_txt(villes)) :
         pass
 
-    else : 
-        browser = webdriver.Firefox(options=create_robot_profile(infos))
-        browser.get("https://findmylocation.org")
-        time.sleep(20)
-        location = browser.find_element_by_id("locationname").text
-        latitude = browser.find_element_by_id("latitude").text
-        longitude = browser.find_element_by_id("longitude").text
+    else :
+        successful = False
+        while not successful:
+            try:
+                browser = webdriver.Firefox(options=create_robot_profile(infos))
+                browser.get("https://findmylocation.org")
+                time.sleep(20)
+                location = browser.find_element_by_id("locationname").text
+                latitude = browser.find_element_by_id("latitude").text
+                longitude = browser.find_element_by_id("longitude").text
 
 
-        f = open(confirm_path_document_txt(villes), "w")
-        f.write("Latitude : " + latitude + " " + "Longitude : " + longitude + "\n\n")
-        f.write("L'ADRESSE EXACTE EST : " + location)
-        f.close()
-        browser.close()
+                f = open(confirm_path_document_txt(villes), "w")
+                f.write("Latitude : " + latitude + " " + "Longitude : " + longitude + "\n\n")
+                f.write("L'ADRESSE EXACTE EST : " + location)
+                f.close()
+                browser.close()
+                
+                successful = True  # If this is reached, then my_stuff() worked
+            except WebDriverException:
+                browser.close()
+                time.sleep(15)
 
 
 def get_article_url(article : WebElement) -> str:
@@ -197,8 +205,9 @@ def write_article_to_csv(creation_fichier, villes, term, n, article) -> None:
     date = get_article_date(article)
     days_diff = calculate_days_diff(article)
     time_stamp = get_full_current_time()
+    keyword_type = "local"
 
-    csv_rows = [villes, term, n, nom_media, titre_article, date, days_diff, lien_article, time_stamp]
+    csv_rows = [villes, term, n, nom_media, titre_article, date, days_diff, lien_article, time_stamp, keyword_type]
     print(csv_rows)
     creation_fichier.writerow(csv_rows)
 
@@ -220,20 +229,23 @@ def process_city(i : int, city: dict) -> None:
     infos = [city["ville"], city["latitude"], city["longitude"]]
     print("<>" * 32)
     villes = infos[0]  # imprimer juste les villes
+    print(create_path_document_csv(villes))
 
     with safe_open_w(create_path_document_csv(villes)) as f2:
         creation_fichier = csv.writer(f2)
-        creation_fichier.writerow(["Villes", "Mots-clés", "position du média", "Nom du média", "Titre de l'article", "Date de publication", "Journée de différence","URL", "date et heure saisie"])
+        creation_fichier.writerow(["Villes", "Mots-clés", "position du média", "Nom du média", "Titre de l'article", "Date de publication", "Journée de différence","URL", "date et heure saisie", "type mot-clés"])
         local = termes[0]
         national = termes[2]
         mixte = termes[1]
         for term in local: #termin_variable_
+            print("---" * 25)
             print(term)
+            print("---" * 25)
             research_term_in_city(villes, creation_fichier, term, infos)                
 
 def main() -> None:
 
-    for i, city in enumerate(cities[0:21]): #indexrange
+    for i, city in enumerate(cities[0:105]): #indexrange
         process_city(i, city)
 
 

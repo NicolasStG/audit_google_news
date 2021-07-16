@@ -10,7 +10,7 @@ from datetime import datetime
 from urllib3 import filepost
 from googleQuebec import termes, cities, montreal
 from selenium import webdriver
-from selenium.common.exceptions import NoSuchElementException
+from selenium.common.exceptions import NoSuchElementException, WebDriverException
 from selenium.webdriver import FirefoxOptions
 from selenium.webdriver.remote.webelement import WebElement
 from selenium.webdriver.common.by import By
@@ -117,20 +117,28 @@ def get_localisation_confirmation(infos : str, villes : str) -> filepost:
     if os.path.exists(confirm_path_document_txt(villes)) :
         pass
 
-    else : 
-        browser = webdriver.Firefox(options=create_robot_profile(infos))
-        browser.get("https://findmylocation.org")
-        time.sleep(20)
-        location = browser.find_element_by_id("locationname").text
-        latitude = browser.find_element_by_id("latitude").text
-        longitude = browser.find_element_by_id("longitude").text
+    else :
+        successful = False
+        while not successful:
+            try:
+                browser = webdriver.Firefox(options=create_robot_profile(infos))
+                browser.get("https://findmylocation.org")
+                time.sleep(20)
+                location = browser.find_element_by_id("locationname").text
+                latitude = browser.find_element_by_id("latitude").text
+                longitude = browser.find_element_by_id("longitude").text
 
 
-        f = open(confirm_path_document_txt(villes), "w")
-        f.write("Latitude : " + latitude + " " + "Longitude : " + longitude + "\n\n")
-        f.write("L'ADRESSE EXACTE EST : " + location)
-        f.close()
-        browser.close()
+                f = open(confirm_path_document_txt(villes), "w")
+                f.write("Latitude : " + latitude + " " + "Longitude : " + longitude + "\n\n")
+                f.write("L'ADRESSE EXACTE EST : " + location)
+                f.close()
+                browser.close()
+                
+                successful = True  # If this is reached, then my_stuff() worked
+            except WebDriverException:
+                browser.close()
+                time.sleep(15)
 
 
 def get_article_url(article : WebElement) -> str:
