@@ -10,7 +10,7 @@ termes = [
 		'maire OR mairesse',
 		'candidat',
 		'préfet',
-		'travaux routiers',
+		'"travaux routiers"',
 		'autobus OR tramway',
     'météo'
 	],
