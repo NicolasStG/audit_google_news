@@ -17,13 +17,13 @@ termes = [
 	[
 		'élection OR campagne',
 		'député',
-		'arme à feu',
-		'santé publique',
+		'"arme à feu"',
+		'"santé publique"',
 		'covid OR COVID',
 		'construction'
 	],
 	[
-		'premier ministre',
+		'"premier ministre"',
     'climat',
     'immigration',
     'racisme',
