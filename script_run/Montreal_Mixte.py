@@ -10,7 +10,7 @@ from datetime import datetime
 from urllib3 import filepost
 from googleQuebec import termes, cities, montreal
 from selenium import webdriver
-from selenium.common.exceptions import NoSuchElementException, WebDriverException
+from selenium.common.exceptions import NoSuchElementException, TimeoutException, WebDriverException
 from selenium.webdriver import FirefoxOptions
 from selenium.webdriver.remote.webelement import WebElement
 from selenium.webdriver.common.by import By
@@ -214,16 +214,25 @@ def write_article_to_csv(creation_fichier, villes, term, n, article) -> None:
 
 def research_term_in_city(villes, creation_fichier, term, infos) -> None:
     browser = webdriver.Firefox(options=create_robot_profile(infos))
-   
-    browser.get(get_full_url(term, villes))
 
-    for n, article in enumerate(get_articles(browser)):
-        if n < 25: #numbergrab
-            write_article_to_csv(creation_fichier, villes, term, n+1, article)
+    successful = False
+    while not successful:
+        try:
+            browser.get(get_full_url(term, villes))
+
+            for n, article in enumerate(get_articles(browser)):
+                if n < 25: #numbergrab
+                    write_article_to_csv(creation_fichier, villes, term, n+1, article)
 
 
-    get_localisation_confirmation(infos, villes)
-    browser.close()
+            get_localisation_confirmation(infos, villes)
+            browser.close()
+
+            
+            successful = True  # If this is reached, then my_stuff() worked
+        except TimeoutException :
+            browser.close()
+            time.sleep(15)
 
 def process_city(city: dict) -> None:
     infos = [city["ville"], city["latitude"], city["longitude"]]

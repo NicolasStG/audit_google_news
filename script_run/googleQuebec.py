@@ -450,7 +450,7 @@ cities = [
  },
  {
    "code": 84065,
-   "ville": "Mansfield-et-Pontefract",
+   "ville": "Mansfield",
    "pop": 2341,
    "latitude": 45.86111,
    "longitude": -76.73917,
@@ -846,7 +846,7 @@ cities = [
  },
  {
    "code": 22035,
-   "ville": "Stoneham-et-Tewkesbury",
+   "ville": "Stoneham",
    "pop": 9134,
    "latitude": 46.99917,
    "longitude": -71.36806,
