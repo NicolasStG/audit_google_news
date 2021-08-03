@@ -218,7 +218,7 @@ def research_term_in_city(villes, creation_fichier, term, infos) -> None:
     successful = False
     while not successful:
         try:
-            browser.get(get_full_url(term, villes))
+            browser.get(get_full_url(term))
 
             for n, article in enumerate(get_articles(browser)):
                 if n < 25: #numbergrab
