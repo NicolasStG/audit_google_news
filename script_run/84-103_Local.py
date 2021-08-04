@@ -136,15 +136,21 @@ def get_localisation_confirmation(infos : str, villes : str) -> filepost:
                 browser.close()
                 
                 successful = True  # If this is reached, then my_stuff() worked
-            except WebDriverException:
+            except Exception as i:
+                print(i)
                 browser.close()
                 time.sleep(15)
 
+
 def get_article_url(article : WebElement) -> str:
     #URL ---> DÉTERMINER COMMENT DIFFÉRENCIER LOCAL, NATIONAL, RÉGIONAL ET HORS-CANADA
-    lien_article = article.find_element_by_class_name("VDXfz").get_attribute('href')
-    r = requests.get(lien_article, allow_redirects=False)
-    return r.headers['Location']
+    try :
+        lien_article = article.find_element_by_class_name("VDXfz").get_attribute('href')
+        r = requests.get(lien_article, allow_redirects=False)
+        return r.headers['Location']
+    
+    except KeyError:
+        return "" 
 
 
 
@@ -229,7 +235,8 @@ def research_term_in_city(villes, creation_fichier, term, infos) -> None:
 
             
             successful = True  # If this is reached, then my_stuff() worked
-        except TimeoutException :
+        except Exception as i:
+            print(i)
             browser.close()
             time.sleep(15)
 
