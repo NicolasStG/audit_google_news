@@ -1,0 +1,15 @@
+<><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><>
+./audit_google_news/Saisie_2021-07-28/Montréal_V2_Local_2021-07-28.csv
+---------------------------------------------------------------------------
+accident
+---------------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/goognewsqc/audit_google_news/script_run/Montreal_Local_V2.py", line 262, in <module>
+    main()
+  File "/Users/goognewsqc/audit_google_news/script_run/Montreal_Local_V2.py", line 258, in main
+    process_city(city)
+  File "/Users/goognewsqc/audit_google_news/script_run/Montreal_Local_V2.py", line 253, in process_city
+    research_term_in_city(villes, creation_fichier, term, infos)                
+  File "/Users/goognewsqc/audit_google_news/script_run/Montreal_Local_V2.py", line 221, in research_term_in_city
+    browser.get(get_full_url(term, villes))
+TypeError: get_full_url() takes 1 positional argument but 2 were given
