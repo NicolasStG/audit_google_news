@@ -1,0 +1,22 @@
+<><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><>
+./audit_google_news/Saisie_2022-01-18/ActonVale_Mixte_2022-01-18.csv
+---------------------------------------------------------------------------
+élection OR campagne
+---------------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/goognewsqc/audit_google_news/script_run/0-21_Mixte.py", line 262, in <module>
+    main()
+  File "/Users/goognewsqc/audit_google_news/script_run/0-21_Mixte.py", line 258, in main
+    process_city(i, city)
+  File "/Users/goognewsqc/audit_google_news/script_run/0-21_Mixte.py", line 253, in process_city
+    research_term_in_city(villes, creation_fichier, term, infos)                
+  File "/Users/goognewsqc/audit_google_news/script_run/0-21_Mixte.py", line 221, in research_term_in_city
+    browser.get(get_full_url(term, villes))
+  File "/Users/goognewsqc/audit_google_news/env/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py", line 333, in get
+    self.execute(Command.GET, {'url': url})
+  File "/Users/goognewsqc/audit_google_news/env/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "/Users/goognewsqc/audit_google_news/env/lib/python3.9/site-packages/selenium/webdriver/remote/errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: Reached error page: about:neterror?e=dnsNotFound&u=https%3A//news.google.com/search%3Fq%3D%25C3%25A9lection%2520OR%2520campagne%2520pr%25C3%25A8s%2520de%2520Acton%2520Vale&c=UTF-8&d=Impossible%20de%20se%20connecter%20au%20serveur%20%C3%A0%20l%E2%80%99adresse%20news.google.com.
+
