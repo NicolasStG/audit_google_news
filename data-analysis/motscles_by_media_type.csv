@@ -1,0 +1,27 @@
+type mot-clés,Mots-clés,hors Québec,local/regional,national,non media
+local,"""Centre de services scolaire"" OR ""Commission scolaire""",48,14276,3851,660
+local,"""travaux routiers""",1377,7829,2114,534
+local,CISSS OR CIUSSS,2,14607,2969,2139
+local,Cégep,465,14463,3579,881
+local,accident,1026,11906,6450,607
+local,autobus OR tramway,435,12729,5642,594
+local,candidat,764,15008,3507,664
+local,décès OR mort,520,5600,5276,9164
+local,incendie,1000,13640,5106,479
+local,maire OR mairesse,1008,14774,3922,592
+local,météo,1256,7132,11189,237
+local,police OR Sûreté,529,12052,6538,696
+local,préfet,2750,12642,1537,382
+mixte,"""arme à feu""",870,8239,7611,394
+mixte,"""santé publique""",478,13868,4118,1689
+mixte,construction,648,13046,5775,860
+mixte,covid OR COVID,740,13724,4884,1173
+mixte,député,783,13861,4320,723
+mixte,élection OR campagne,826,14456,4369,615
+national,"""premier ministre""",908,10461,7178,736
+national,Biden OR Trump,1259,7946,8085,112
+national,Chine,1521,7154,8648,523
+national,climat,1296,11471,5491,540
+national,déficit,1449,8882,5189,285
+national,immigration,940,10618,6104,299
+national,racisme,1887,6725,6852,250
